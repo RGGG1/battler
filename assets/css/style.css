@@ -1,68 +1,4 @@
-// Carousel
-
-
-  .container {
-    position: relative;
-    width: 125px;
-    margin: 125px auto 0 auto;
-    perspective: 1000px;
-  }
-  
-  .carousel {
-    position: absolute;
-    width: 375px;
-    height: 375px;
-    transform-style: preserve-3d; 
-    animation: rotate360 15s infinite forwards linear;
-  }
-  .carousel__face { 
-    position: absolute;
-    width: 125px;
-    height: 125px;
-    top: 20px;
-    left: 10px;
-    right: 10px;
-    background-size: cover;
-    box-shadow:inset 0 0 0 200px rgba(0,0,0,0.5);
-    display: flex;
-    border-radius: 50%
-  }
-  
-  span {
-    margin: auto;
-    font-size: 2rem;
-  }
-  
-  
-  .carousel__face:nth-child(1) {
-    background-image: url("/assets/images/9.png");
-    transform: rotateY(  0deg) translateZ(430px); }
-  .carousel__face:nth-child(2) { 
-    background-image: url("/assets/images/1.png");
-      transform: rotateY( 72deg) translateZ(430px); }
-  .carousel__face:nth-child(3) {
-    background-image: url("/assets/images/2.png");
-    transform: rotateY( 145deg) translateZ(430px); }
-  .carousel__face:nth-child(4) {
-    background-image: url("/assets/images/5.png");
-    transform: rotateY(220deg) translateZ(430px); }
-  .carousel__face:nth-child(5) { 
-    background-image: url("/assets/images/6.png");
-   transform: rotateY(290deg) translateZ(430px); }
-  
-  
-  
-  @keyframes rotate360 {
-    from {
-      transform: rotateY(0deg);
-    }
-    to {
-      transform: rotateY(-360deg);
-    }
-  }
-  
-  
-  
+ 
 //
 //
 
@@ -116,7 +52,6 @@
     border: none;
     background-size: cover;
     background-color: black;
-    box-shadow:inset 0 0 0 200px rgba(0,0,0,0.5);
 }
 
 .character-second {
@@ -161,6 +96,51 @@
     background-image: url("/assets/images/9.png");
 }
 
+.weapon {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    padding: 10px 10px 10px 10px;
+    outline: none;
+    border: none;
+    background-size: cover;
+    background-color: black;
+}
+
+#sword {
+    background-image: url("/assets/images/sword.png");
+}
+
+#shield {
+    background-image: url("/assets/images/shield.png");
+}
+
+#ballchain {
+    background-image: url("/assets/images/ballchain.png");
+}
+
+.special {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    padding: 10px 10px 10px 10px;
+    outline: none;
+    border: none;
+    background-size: cover;
+    background-color: black;
+}
+
+#fireball {
+    background-image: url("/assets/images/fireball.png");
+}
+
+#ninja {
+    background-image: url("/assets/images/ninja.png");
+}
+
+#lightening {
+    background-image: url("/assets/images/lightening.png");
+}
 
 button {
     margin: 25px 25px 25px 25px;
