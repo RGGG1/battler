@@ -4,14 +4,17 @@ let character2 = {attack:90, defence:"25"};
 
 function fight() 
 { 
-        var random = Math.floor(Math.random() * 100) + 1;
+        let random = Math.floor(Math.random() * 100) + 1;
         console.log(random);
-        var win_chance = character1.attack / (character1.attack + character2.attack);
+        let win_chance = (character1.attack / (character1.attack + character2.attack))*100;
+        let result = document.getElementById("result");
         
         if (random <= win_chance) {
-            document.getElementById("result").innerHTML = "P1";
+            result.innerHTML = "P2";
           } else {
-            document.getElementById("result").innerHTML = "P2";
+            result.innerHTML = "P1";
           }
+          console.log(win_chance);
+          console.log(result.innerHTML);
 }
 
