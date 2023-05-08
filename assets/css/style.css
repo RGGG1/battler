@@ -43,38 +43,26 @@
     transform: translateX(-0.02em);
   }
 
-.character-first {
+#gamearea {
+    width: 500px;
+}
+
+
+
+/* Character */
+
+.character, .weapon, .special {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    padding: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
     outline: none;
     border: none;
     background-size: cover;
     background-color: black;
+    display: inline;
 }
 
-.character-second {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    padding: 10px 10px 10px 10px;
-    outline: none;
-    border: none;
-    background-size: cover;
-    background-color: black;
-}
-
-.character-third {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    padding: 10px 10px 10px 10px;
-    outline: none;
-    border: none;
-    background-size: cover;
-    background-color: black;
-}
 
 #character1 {
     background-image: url("/assets/images/1.png");
@@ -96,17 +84,6 @@
     background-image: url("/assets/images/9.png");
 }
 
-.weapon {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    padding: 10px 10px 10px 10px;
-    outline: none;
-    border: none;
-    background-size: cover;
-    background-color: black;
-}
-
 #sword {
     background-image: url("/assets/images/sword.png");
 }
@@ -117,17 +94,6 @@
 
 #ballchain {
     background-image: url("/assets/images/ballchain.png");
-}
-
-.special {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    padding: 10px 10px 10px 10px;
-    outline: none;
-    border: none;
-    background-size: cover;
-    background-color: black;
 }
 
 #fireball {
@@ -144,20 +110,22 @@
 
 button {
     margin: 25px 25px 25px 25px;
-}
-
-button.character {
-    margin: 25px 25px 25px 25px;
     outline: solid;
     outline-color: gray;
+    outline: solid;
+    outline-color: black;
 }
 
-button.character:active {
+button:hover {
     outline: solid;
-    outline-color: green;
+    outline-color: red;
+    width: 125px;
+    height: 125px;
 }
 
-button.character:hover {
+button:focus {
     outline: solid;
-    outline-color: green;
+    outline-color: red;
+    width: 125px;
+    height: 125px;
 }
