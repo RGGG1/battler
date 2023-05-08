@@ -1,3 +1,133 @@
+// Carousel
+
+body {
+    margin: 0;
+    background: lightgray;
+    text-align: center;
+    font-family: sans-serif;
+    color: #fefefe;
+  }
+  .container {
+    position: relative;
+    width: 125px;
+    margin: 125px auto 0 auto;
+    perspective: 1000px;
+  }
+  
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 15s infinite forwards linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+    border-radius: 50%
+  }
+  
+  span {
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("/assets/images/9.png");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("/assets/images/1.png");
+      transform: rotateY( 72deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("/assets/images/2.png");
+    transform: rotateY( 145deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("/assets/images/5.png");
+    transform: rotateY(220deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("/assets/images/6.png");
+   transform: rotateY(290deg) translateZ(430px); }
+  
+  
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+  
+  
+  
+//
+
+.slider-box {
+    width: 30vh;
+    perspective: 1000px;
+    position: relative;
+    top: -17vh; /* height to top */
+    padding-top: 10vh;
+  }
+  .carousel1 {
+    width: 100%;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear; /*  speed:  */
+  }
+  .carousel1 .carousel-item {
+    width: 100%;
+    height: 25vh;
+    position: absolute;
+    overflow: hidden;
+  }
+  .carousel1-item {
+    box-shadow: 0px 0px 20px 0px #000;
+    border-radius: 3vh;
+  }
+  .carousel1 .img {
+    transition: ease-in-out 0.5s;
+    width: 100%;
+    height: 100%;
+  }
+  .carousel1 .img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+    position: absolute;
+  }
+  .carousel1:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  /* animation rotate */
+  @keyframes rotate {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  .it1 {
+    transform: rotateY(0deg) translateZ(50vh);
+  }
+  .it2 {
+    transform: rotateY(40deg) translateZ(50vh);
+  }
+  .it3 {
+    transform: rotateY(80deg) translateZ(50vh);
+
+
+//
+
 * {
     box-sizing: border-box;
   }
@@ -39,26 +169,57 @@
     transform: translateX(-0.02em);
   }
 
-.character {
+.character-first {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     padding: 10px 10px 10px 10px;
-    outline: black;
-    background-image: url("/assets/images/aGod.png");
+    outline: none;
+    border: none;
     background-size: cover;
+    background-color: black;
+}
+
+.character-second {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    padding: 10px 10px 10px 10px;
+    outline: none;
+    border: none;
+    background-size: cover;
+    background-color: black;
+}
+
+.character-third {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px 10px 10px 10px;
+    outline: none;
+    border: none;
+    background-size: cover;
+    background-color: black;
 }
 
 #character1 {
-    background-image: url("/assets/images/aGod.png");
+    background-image: url("/assets/images/1.png");
 }
 
 #character2 {
-    background-image: url("/assets/images/bGod.png");
+    background-image: url("/assets/images/2.png");
 }
 
 #character3 {
-    background-image: url("/assets/images/cGod.png");
+    background-image: url("/assets/images/5.png");
+}
+
+#character4 {
+    background-image: url("/assets/images/6.png");
+}
+
+#character5 {
+    background-image: url("/assets/images/9.png");
 }
 
 
@@ -66,12 +227,18 @@ button {
     margin: 25px 25px 25px 25px;
 }
 
+button.character {
+    margin: 25px 25px 25px 25px;
+    outline: solid;
+    outline-color: gray;
+}
+
 button.character:active {
     outline: solid;
-    outline-color: red;
+    outline-color: green;
 }
 
 button.character:hover {
     outline: solid;
-    outline-color: red;
+    outline-color: green;
 }
