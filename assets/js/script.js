@@ -1,4 +1,6 @@
 
+/* let and const for specific variables, var for global variables */
+
 let character1 = {attack:75, defence:"25"};
 let character2 = {attack:90, defence:"25"};
 
@@ -14,7 +16,5 @@ function fight()
           } else {
             result.innerHTML = "P1";
           }
-          console.log(win_chance);
-          console.log(result.innerHTML);
 }
 
