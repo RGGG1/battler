@@ -1,0 +1,82 @@
+ <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+            <!-- font awesome and google fonts -->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+                integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+            <link rel="stylesheet" href="assets/css/style3.css">
+            
+            <!-- Description, Kyewords, Title -->
+            <title>Battler</title>
+            <meta name="description" content="Fast Action Battle Game">
+            <meta name="keywords" content="Mobile game, cool new apps, fun mobile games, auto battler">
+        
+        </head>
+        <body>
+        
+        
+            <h2>Radio Buttons</h2>
+
+
+            <form name="myForm">
+    <input type="radio" name="myRadios"  value="C1" >C1</value>
+    <input type="radio" name="myRadios"  value="C2" >C2</value>
+    <input type="radio" name="myRadios"  value="C3" >C3</value>
+</form>
+Character: <span id="character"></span>
+
+<script>
+var amountField = document.getElementById('character');
+var rad = document.myForm.myRadios;
+var prev = null;
+for(var i = 0; i < rad.length; i++) {
+    rad[i].onclick = function() {
+        console.log(this.value);
+        if(this !== prev) {
+            prev = this;
+            characterField.textContent = 1000+1000*this.value/100;
+            characterField.textContent = this.value;
+        }
+    };
+}
+</script>
+
+
+<p>Choose your favorite Web language:</p>
+
+<form>
+    <p>choose language</p><br>
+  <input type="radio" id="html" name="language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+<p>choose sport</p>
+<input type="radio" id="html" name="sport" value="hockey">
+  <label for="hockey">hockey</label><br>
+  <input type="radio" id="css" name="sport" value="rugby">
+  <label for="rugby">rugby</label><br>
+  <input type="radio" id="javascript" name="sport" value="football">
+  <label for="football">football</label><br>
+<Button onClick="fight()">Fight</Button> 
+</form> 
+Result is: <span id = "result">ok </span>
+</body>
+</html>
+        
+        
+        
+        
+     
+
+<script src="assets/js/script3.js"></script>
+    <!--font awesome script-->
+    <script src="https://kit.fontawesome.com/1f271c2fd4.js" crossorigin="anonymous"></script>
+</body>
+</html>
