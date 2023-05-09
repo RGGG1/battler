@@ -30,43 +30,9 @@
 </form>
 Character: <span id="character"></span>
 
-<script>
-var amountField = document.getElementById('character');
-var rad = document.myForm.myRadios;
-var prev = null;
-for(var i = 0; i < rad.length; i++) {
-    rad[i].onclick = function() {
-        console.log(this.value);
-        if(this !== prev) {
-            prev = this;
-            characterField.textContent = 1000+1000*this.value/100;
-            characterField.textContent = this.value;
-        }
-    };
-}
-</script>
 
 
-<p>Choose your favorite Web language:</p>
 
-<form>
-    <p>choose language</p><br>
-  <input type="radio" id="html" name="language" value="HTML">
-  <label for="html">HTML</label><br>
-  <input type="radio" id="css" name="language" value="CSS">
-  <label for="css">CSS</label><br>
-  <input type="radio" id="javascript" name="language" value="JavaScript">
-  <label for="javascript">JavaScript</label>
-<p>choose sport</p>
-<input type="radio" id="html" name="sport" value="hockey">
-  <label for="hockey">hockey</label><br>
-  <input type="radio" id="css" name="sport" value="rugby">
-  <label for="rugby">rugby</label><br>
-  <input type="radio" id="javascript" name="sport" value="football">
-  <label for="football">football</label><br>
-<Button onClick="fight()">Fight</Button> 
-</form> 
-Result is: <span id = "result">ok </span>
 </body>
 </html>
         
