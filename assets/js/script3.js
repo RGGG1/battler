@@ -57,11 +57,17 @@ function fight()
 { 
     let random = Math.floor(Math.random() * 100) + 1;
         console.log(random);
-        console.log(character.textContent);
-        /* I can't seem to update the C1 variable and then search its array values
-        var C1 = character.textContent;
-        console.log(C1.attack);
-        */
+
+        characterValue = parseInt(character.textContent);
+        weaponValue = parseInt(weapon.textContent);
+        specialValue = parseInt(special.textContent);
+
+        score = (characterValue + weaponValue + specialValue);
+
+        console.log(score);
+
+    // need to update these results calcs below, to be based on user selected items total score vs random opponent totals.
+       
         let win_chance = (C1.attack / (C1.attack + C2.attack))*100;
         let result = document.getElementById("result");
         
@@ -71,5 +77,6 @@ function fight()
             result.innerHTML = "C1";
           }
 }
+
 
 
