@@ -73,7 +73,7 @@ function createOpponent() {
 }
 
 
-// Fight Character vs opponent
+// Fight Character vs opponent - NOTE I MAY ONLY NEED ONE FIGHT FUNCTION
 
 function fight1() {
     console.log(window.totalValue);
