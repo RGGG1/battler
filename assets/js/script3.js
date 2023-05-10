@@ -51,7 +51,38 @@ for(let i = 0; i < char.length; i++) {
 
 }
 
-// Fight
+//
+function characterScore() 
+{ 
+        characterValue = parseInt(character.textContent);
+        weaponValue = parseInt(weapon.textContent);
+        specialValue = parseInt(special.textContent);
+        totalValue = (characterValue + weaponValue + specialValue);
+        console.log(totalValue);
+
+        let score = document.getElementById("score");        
+        score.innerHTML = totalValue;    
+}
+
+// Create random matchup - need to adjust the min max scores later
+
+function createOpponent() {
+    var min = 150;
+    var max = 180;
+    var randomOpponent = Math.round(Math.random() * (max - min) + (min));
+
+    let oScore = document.getElementById("opponentScore"); 
+    oScore.innerHTML = randomOpponent;
+}
+
+
+// Fight Character vs opponent
+
+function fight1() {
+    console.log(totalValue);
+}
+
+// Fight - orginal, maybe delete
 
 function fight() 
 { 

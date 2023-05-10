@@ -39,15 +39,25 @@
     <input type="radio" name="specials"  value="60" >S2</value>
     <input type="radio" name="specials"  value="70" >S3</value>
     <br>
+    <!-- Hide Selection section later -->
     Selection: <span id="character"></span> and <span id="weapon"></span> and <span id="special"></span>
 </form>
 
 <br>
 <br>
-<Button onClick="fight()">Fight</Button>
-Result is: <span id = "result"></span>
-
-
+<!-- Hide Score later -->
+<Button onClick="characterScore()">Score</Button>
+Score is: <span id = "score"></span>
+<br>
+<br>
+<!--Create Oppnent score-->
+<Button onClick="createOpponent()">Opponent</Button>
+Opponent Score: <span id="opponentScore"></span>
+<br>
+<br>
+<!--Fight result-->
+<Button onClick="fight1()">Fight</Button>
+Fight result: <span id="fightResult"></span>
 
 </body>
 </html>
