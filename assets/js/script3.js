@@ -85,44 +85,55 @@ function fight1() {
     random = Math.floor(Math.random() * 100) + 1;
     console.log(random)
 
-    let winner = document.getElementById("fightResult");
+    let winner = document.getElementById("fightResult1");
         
         if (random <= window.characterWinChance) {
             winner.innerHTML = "Character";
           } else {
             winner.innerHTML = "Opponent";
           }
-    
-
-
 }
 
-// Fight - orginal, maybe delete
+//
 
-function fight() 
-{ 
-    let random = Math.floor(Math.random() * 100) + 1;
-        console.log(random);
+function fight2() {
+    console.log(window.totalValue);
+    console.log(window.randomOpponent);
 
-        characterValue = parseInt(character.textContent);
-        weaponValue = parseInt(weapon.textContent);
-        specialValue = parseInt(special.textContent);
+    window.characterWinChance = (window.totalValue / (window.totalValue + window.randomOpponent))*100;
+    console.log(window.characterWinChance);
 
-        score = (characterValue + weaponValue + specialValue);
+    random = Math.floor(Math.random() * 100) + 1;
+    console.log(random)
 
-        console.log(score);
-
-    // need to update these results calcs below, to be based on user selected items total score vs random opponent totals.
-       
-        let win_chance = (C1.attack / (C1.attack + C2.attack))*100;
-        let result = document.getElementById("result");
+    let winner = document.getElementById("fightResult2");
         
-        if (random <= win_chance) {
-            result.innerHTML = "C2";
+        if (random <= window.characterWinChance) {
+            winner.innerHTML = "Character";
           } else {
-            result.innerHTML = "C1";
+            winner.innerHTML = "Opponent";
           }
 }
 
+//
+
+function fight3() {
+    console.log(window.totalValue);
+    console.log(window.randomOpponent);
+
+    window.characterWinChance = (window.totalValue / (window.totalValue + window.randomOpponent))*100;
+    console.log(window.characterWinChance);
+
+    random = Math.floor(Math.random() * 100) + 1;
+    console.log(random)
+
+    let winner = document.getElementById("fightResult3");
+        
+        if (random <= window.characterWinChance) {
+            winner.innerHTML = "Character";
+          } else {
+            winner.innerHTML = "Opponent";
+          }
+}
 
 
