@@ -88,9 +88,11 @@ function fight1() {
     window.winner1 = document.getElementById("fightResult1");
         
         if (random <= window.characterWinChance) {
-            window.winner1.innerHTML = "Character";
+            window.winner1.innerHTML = "You Win";
+            playerBattleScore();
           } else {
-            window.winner1.innerHTML = "Opponent";
+            window.winner1.innerHTML = "You Lose";
+            opponentBattleScore();
           }
 }
 
@@ -109,9 +111,11 @@ function fight2() {
     window.winner2 = document.getElementById("fightResult2");
         
         if (random <= window.characterWinChance) {
-            window.winner2.innerHTML = "Character";
+            window.winner2.innerHTML = "You Win";
+            playerBattleScore();
           } else {
-            window.winner2.innerHTML = "Opponent";
+            window.winner2.innerHTML = "You Lose";
+            opponentBattleScore();
           }
 }
 
@@ -130,10 +134,26 @@ function fight3() {
     window.winner3 = document.getElementById("fightResult3");
         
         if (random <= window.characterWinChance) {
-            window.winner3.innerHTML = "Character";
+            window.winner3.innerHTML = "You Win";
+            playerBattleScore();
           } else {
-            window.winner3.innerHTML = "Opponent";
+            window.winner3.innerHTML = "You Lose";
+            opponentBattleScore();
           }
 }
+
+// Scores
+
+
+function playerBattleScore() {
+    let oldScore = parseInt(document.getElementById("playerBattleScore").innerText);
+    document.getElementById("playerBattleScore").innerText = ++oldScore;
+}
+
+function opponentBattleScore() {
+    let oldScore = parseInt(document.getElementById("opponentBattleScore").innerText);
+    document.getElementById("opponentBattleScore").innerText = ++oldScore;
+}
+
 
 
