@@ -6,7 +6,6 @@
 var C1 = {attack:75, defence:"25"};
 var C2 = {attack:90, defence:"25"};
 
-
 // Radio buttons
 let character = document.getElementById('character');
 let weapon = document.getElementById('weapon');
@@ -57,11 +56,10 @@ function characterScore()
         characterValue = parseInt(character.textContent);
         weaponValue = parseInt(weapon.textContent);
         specialValue = parseInt(special.textContent);
-        totalValue = (characterValue + weaponValue + specialValue);
+        window.totalValue = (characterValue + weaponValue + specialValue);
         console.log(totalValue);
-
-        let score = document.getElementById("score");        
-        score.innerHTML = totalValue;    
+        
+        score.innerHTML = window.totalValue;    
 }
 
 // Create random matchup - need to adjust the min max scores later
@@ -69,17 +67,34 @@ function characterScore()
 function createOpponent() {
     var min = 150;
     var max = 180;
-    var randomOpponent = Math.round(Math.random() * (max - min) + (min));
+    window.randomOpponent = Math.round(Math.random() * (max - min) + (min));
 
-    let oScore = document.getElementById("opponentScore"); 
-    oScore.innerHTML = randomOpponent;
+    opponentScore.innerHTML = window.randomOpponent;
 }
 
 
 // Fight Character vs opponent
 
 function fight1() {
-    console.log(totalValue);
+    console.log(window.totalValue);
+    console.log(window.randomOpponent);
+
+    window.characterWinChance = (window.totalValue / (window.totalValue + window.randomOpponent))*100;
+    console.log(window.characterWinChance);
+
+    random = Math.floor(Math.random() * 100) + 1;
+    console.log(random)
+
+    let winner = document.getElementById("fightResult");
+        
+        if (random <= window.characterWinChance) {
+            winner.innerHTML = "Character";
+          } else {
+            winner.innerHTML = "Opponent";
+          }
+    
+
+
 }
 
 // Fight - orginal, maybe delete
