@@ -73,7 +73,7 @@ function createOpponent() {
 }
 
 
-// Fight Character vs opponent - NOTE I MAY ONLY NEED ONE FIGHT FUNCTION
+// Fight Character vs opponent - NOTE I MAY ONLY NEED ONE FIGHT FUNCTION, if I can log the scores for each fight somehow to use for stats later
 
 function fight1() {
     console.log(window.totalValue);
@@ -143,8 +143,6 @@ function fight3() {
 }
 
 // Scores
-
-
 function playerBattleScore() {
     let oldScore = parseInt(document.getElementById("playerBattleScore").innerText);
     document.getElementById("playerBattleScore").innerText = ++oldScore;
@@ -154,6 +152,3 @@ function opponentBattleScore() {
     let oldScore = parseInt(document.getElementById("opponentBattleScore").innerText);
     document.getElementById("opponentBattleScore").innerText = ++oldScore;
 }
-
-
-
