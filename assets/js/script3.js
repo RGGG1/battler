@@ -85,12 +85,12 @@ function fight1() {
     random = Math.floor(Math.random() * 100) + 1;
     console.log(random)
 
-    let winner = document.getElementById("fightResult1");
+    window.winner1 = document.getElementById("fightResult1");
         
         if (random <= window.characterWinChance) {
-            winner.innerHTML = "Character";
+            window.winner1.innerHTML = "Character";
           } else {
-            winner.innerHTML = "Opponent";
+            window.winner1.innerHTML = "Opponent";
           }
 }
 
@@ -106,12 +106,12 @@ function fight2() {
     random = Math.floor(Math.random() * 100) + 1;
     console.log(random)
 
-    let winner = document.getElementById("fightResult2");
+    window.winner2 = document.getElementById("fightResult2");
         
         if (random <= window.characterWinChance) {
-            winner.innerHTML = "Character";
+            window.winner2.innerHTML = "Character";
           } else {
-            winner.innerHTML = "Opponent";
+            window.winner2.innerHTML = "Opponent";
           }
 }
 
@@ -127,12 +127,12 @@ function fight3() {
     random = Math.floor(Math.random() * 100) + 1;
     console.log(random)
 
-    let winner = document.getElementById("fightResult3");
+    window.winner3 = document.getElementById("fightResult3");
         
         if (random <= window.characterWinChance) {
-            winner.innerHTML = "Character";
+            window.winner3.innerHTML = "Character";
           } else {
-            winner.innerHTML = "Opponent";
+            window.winner3.innerHTML = "Opponent";
           }
 }
 
