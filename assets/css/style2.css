@@ -4,51 +4,21 @@ body {
 }
 
 /* image as radio button */
-
-#character1 {
-    background-image: url("/assets/images/1.png");
-}
-
-#character2 {
-    background-image: url("/assets/images/2.png");
-}
-
-#character4 {
-    background-image: url("/assets/images/5.png");
-}
-
-input[type="radio"] {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    padding: 5px 5px 5px 5px;
-    outline: none;
-    border: none;
-    background-size: cover;
-    background-color: black;
-    display: inline;
-}
-
-button {
-    margin: 25px 25px 25px 25px;
-    outline: solid;
-    outline-color: gray;
-    outline: solid;
-    outline-color: black;
-}
-
-button:hover {
-    outline: solid;
-    outline-color: gold;
-    border: 10px;
-    border-color: gold;
-    width: 125px;
-    height: 125px;
-}
-
-button:focus {
-    outline: solid;
-    outline-color: gold;
-    width: 125px;
-    height: 125px;
-}
+/* HIDE RADIO */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + img {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + img {
+    outline: 2px solid #f00;
+    padding: 20px 20px 20px 20px;
+  }

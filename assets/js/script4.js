@@ -1,5 +1,8 @@
 
-
+$('input').on('change', function() {
+    $('body').toggleClass('blue');
+  });
+  
 
 // Currently trying to get the character traits to be updated and accessible based on the radio button selections. E.g. if a user selects C1 then C1 becomes the character variable of which we check the attack rating
 

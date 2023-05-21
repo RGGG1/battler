@@ -9,7 +9,7 @@
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
                 integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-            <link rel="stylesheet" href="assets/css/style3.css">
+            <link rel="stylesheet" href="assets/css/style4.css">
             
             <!-- Description, Kyewords, Title -->
             <title>Battler</title>
@@ -17,12 +17,70 @@
             <meta name="keywords" content="Mobile game, cool new apps, fun mobile games, auto battler">
         
         </head>
-        <body>
         
+        <div class="container">
+            <input type="radio" name="slider" id="item-1" checked>
+            <input type="radio" name="slider" id="item-2">
+            <input type="radio" name="slider" id="item-3">
+            <input type="radio" name="slider" id="item-4">
+          <div class="cards">
+            <label class="card" for="item-1" id="song-1" name="characters"  value="50">
+                    <img src="assets/images/1.png" alt="Option 1">
+                </label>
+            <label class="card" for="item-2" id="song-2">
+                <img src="assets/images/2.png" alt="Option 1">
+            </label>
+            <label class="card" for="item-3" id="song-3">
+                <img src="assets/images/5.png" alt="Option 1">
+            </label>
+            <label class="card" for="item-4" id="song-4" name="characters"  value="50">
+                <img src="assets/images/6.png" alt="Option 1">
+            </label>
+          </div>
+          <div class="player">
+            <div class="upper-part">
+              <div class="play-icon">
+                <svg width="20" height="20" fill="#2992dc" stroke="#2992dc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-play" viewBox="0 0 24 24">
+                  <defs/>
+                  <path d="M5 3l14 9-14 9V3z"/>
+                </svg>
+              </div>
+              <div class="info-area" id="test">
+                <label class="song-info" id="song-info-1">
+                  <div class="title">Bunker</div>
+                  <div class="sub-line">
+                    <div class="subtitle">Balthazar</div>
+                    <div class="time">4.05</div>
+                  </div>
+                </label>
+                <label class="song-info" id="song-info-2">
+                  <div class="title">Words Remain</div>
+                  <div class="sub-line">
+                    <div class="subtitle">Moderator</div>
+                    <div class="time">4.05</div>
+                  </div>
+                </label>
+                <label class="song-info" id="song-info-3">
+                  <div class="title">Falling Out</div>
+                  <div class="sub-line">
+                    <div class="subtitle">Otzeki</div>
+                    <div class="time">4.05</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <span class="progress"></span>
+            </div>
+          </div>
+        </div>
+
+
         
 
             
 
+              <body>
 
     <form name="myForm">
     <p>Character</p>
@@ -109,7 +167,7 @@ Score: <span id="playerBattleScore">0</span> : <span id="opponentBattleScore">0<
         
      
 
-<script src="assets/js/script3.js"></script>
+<script src="assets/js/script.js"></script>
     <!--font awesome script-->
     <script src="https://kit.fontawesome.com/1f271c2fd4.js" crossorigin="anonymous"></script>
 </body>

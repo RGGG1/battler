@@ -3,4 +3,22 @@ body {
     background-color: white;
 }
 
-/* image as radio button */
+/* image as radio button and hide the actual radio button */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + img {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + img {
+    outline: 2px solid gold;
+    border-radius: 50%;
+    padding: 2px 2px 2px 2px;
+  }
