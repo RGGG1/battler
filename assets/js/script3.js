@@ -1,8 +1,4 @@
 
-
-
-// Currently trying to get the character traits to be updated and accessible based on the radio button selections. E.g. if a user selects C1 then C1 becomes the character variable of which we check the attack rating
-
 // Character names
 
 window.characterNames = ["John", "Adam", "Mary"];
@@ -66,6 +62,8 @@ function characterScore()
         console.log(totalValue);
         
         score.innerHTML = window.totalValue;    
+
+
 }
 
 // Create random matchup - need to adjust the min max scores later
@@ -157,4 +155,17 @@ function playerBattleScore() {
 function opponentBattleScore() {
     let oldScore = parseInt(document.getElementById("opponentBattleScore").innerText);
     document.getElementById("opponentBattleScore").innerText = ++oldScore;
+}
+
+
+
+// Characters array
+
+window.onload = choosePic;
+
+var myPix = new Array("assets/images/5.png","assets/images/6.png","assets/images/9.png");
+
+function choosePic() {
+     var randomNum = Math.floor(Math.random() * myPix.length);
+     document.getElementById("myPicture").src = myPix[randomNum];
 }
