@@ -163,13 +163,16 @@ function opponentBattleScore() {
 
 window.onload = choosePic;
 
-var myPix = new Array("assets/images/1.png", "assets/images/2.png", "assets/images/5.png","assets/images/6.png","assets/images/9.png");
+var character1Group = new Array("assets/images/1.png", "assets/images/2.png");
+var character2Group = new Array("assets/images/5.png","assets/images/6.png");
+var character3Group = new Array("assets/images/9.png");
 
 function choosePic() {
-     var randomNum1 = Math.floor(Math.random() * myPix.length);
-     var randomNum2 = Math.floor(Math.random() * myPix.length);
-     var randomNum3 = Math.floor(Math.random() * myPix.length);
-     document.getElementById("myPicture1").src = myPix[randomNum1];
-     document.getElementById("myPicture2").src = myPix[randomNum2];
-     document.getElementById("myPicture3").src = myPix[randomNum3];
+     var randomNum1 = Math.floor(Math.random() * character1Group.length);
+     var randomNum2 = Math.floor(Math.random() * character2Group.length);
+     var randomNum3 = Math.floor(Math.random() * character3Group.length);
+     document.getElementById("myPicture1").src = character1Group[randomNum1];
+     document.getElementById("myPicture2").src = character2Group[randomNum2];
+     document.getElementById("myPicture3").src = character3Group[randomNum3];
 }
+
