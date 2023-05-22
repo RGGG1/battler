@@ -172,3 +172,5 @@ function choosePic() {
      window.document.getElementById("myPicture3").src = character3Group[randomNum3];
 }
 
+/* hiding radio buttons */
+

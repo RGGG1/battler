@@ -30,3 +30,13 @@ img {
     outline: 5px solid red;
   }
 
+
+  /* hiding radio buttons */
+
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }

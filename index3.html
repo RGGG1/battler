@@ -24,7 +24,6 @@
 
             
     <form name="myForm">
-            <p>Character</p>
     <label>
         <input type="radio" name="characters"  value="50">
         <img src="" alt="Option 1" height="150px" width="150px" id="myPicture1">
@@ -38,7 +37,6 @@
         <img src="" alt="Option 1" height="150px" width="150px" id="myPicture3">
     </label>
     <br>    
-    <p>Weapon</p>
     <label>
         <input type="radio" name="weapons"  value="50" >
         <img src="assets/images/shield.png" alt="Option 1" height="150px" width="150px">
@@ -52,7 +50,6 @@
         <img src="assets/images/ballchain.png" alt="Option 1" height="150px" width="150px">
     </label>
     <br>
-    <p>Special</p>
     <label>
         <input type="radio" name="specials"  value="50" >
         <img src="assets/images/lightening.png" alt="Option 1" height="150px" width="150px">
@@ -70,6 +67,9 @@
     Selection: <span id="character"></span> and <span id="weapon"></span> and <span id="special"></span>
 </form>
 
+<Button onClick="toggleSelectDropdown()">
+    OK
+</Button>
 
 
 <br>
