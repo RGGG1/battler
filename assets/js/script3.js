@@ -1,12 +1,4 @@
 
-// Character names
-
-window.characterNames = ["John", "Adam", "Mary"];
-
-
-// Character traits
-var C1 = {attack:75, defence:"25"};
-var C2 = {attack:90, defence:"25"};
 
 // Radio buttons
 let character = document.getElementById('character');
@@ -24,8 +16,11 @@ for(let i = 0; i < char.length; i++) {
         if(this !== prev) {
             prev = this;
             character.textContent = this.value;
+                                   
         }
+
     }
+    
 // Radio buttons - weapon selection
         for(let i = 0; i < weap.length; i++) {
             weap[i].onclick = function() {
@@ -55,16 +50,18 @@ for(let i = 0; i < char.length; i++) {
 //
 function characterScore() 
 { 
-        characterValue = parseInt(character.textContent);
-        weaponValue = parseInt(weapon.textContent);
-        specialValue = parseInt(special.textContent);
-        window.totalValue = (characterValue + weaponValue + specialValue);
+        window.characterValue = parseInt(character.textContent);
+        window.weaponValue = parseInt(weapon.textContent);
+        window.specialValue = parseInt(special.textContent);
+        window.totalValue = (window.characterValue + window.weaponValue + window.specialValue);
         console.log(totalValue);
         
         score.innerHTML = window.totalValue;    
-
-
 }
+
+// Show user selection
+
+
 
 // Create random matchup - need to adjust the min max scores later
 
@@ -159,9 +156,8 @@ function opponentBattleScore() {
 
 
 
-// Characters array
-
-window.onload = choosePic;
+// Character Randomisation - I also need to repeat it for weapons and specials
+window.onload = choosePic; // I should put this into a div to reload instead of whole page reload, so that we can then offer rerolls.
 
 var character1Group = new Array("assets/images/1.png", "assets/images/2.png");
 var character2Group = new Array("assets/images/5.png","assets/images/6.png");
@@ -171,8 +167,8 @@ function choosePic() {
      var randomNum1 = Math.floor(Math.random() * character1Group.length);
      var randomNum2 = Math.floor(Math.random() * character2Group.length);
      var randomNum3 = Math.floor(Math.random() * character3Group.length);
-     document.getElementById("myPicture1").src = character1Group[randomNum1];
-     document.getElementById("myPicture2").src = character2Group[randomNum2];
-     document.getElementById("myPicture3").src = character3Group[randomNum3];
+     window.document.getElementById("myPicture1").src = character1Group[randomNum1];
+     window.document.getElementById("myPicture2").src = character2Group[randomNum2];
+     window.document.getElementById("myPicture3").src = character3Group[randomNum3];
 }
 
