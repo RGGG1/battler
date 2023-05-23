@@ -1,6 +1,6 @@
 
 
-// Radio buttons
+/* Radio buttons */
 let character = document.getElementById('character');
 let weapon = document.getElementById('weapon');
 let special = document.getElementById('special');
@@ -167,10 +167,87 @@ function choosePic() {
      var randomNum1 = Math.floor(Math.random() * character1Group.length);
      var randomNum2 = Math.floor(Math.random() * character2Group.length);
      var randomNum3 = Math.floor(Math.random() * character3Group.length);
-     window.document.getElementById("myPicture1").src = character1Group[randomNum1];
-     window.document.getElementById("myPicture2").src = character2Group[randomNum2];
-     window.document.getElementById("myPicture3").src = character3Group[randomNum3];
+     window.document.getElementById("c1").src = character1Group[randomNum1];
+     window.document.getElementById("c2").src = character2Group[randomNum2];
+     window.document.getElementById("c3").src = character3Group[randomNum3];
 }
 
 /* hiding radio buttons */
+function hide() {
+    var c1 = document.getElementById("c1");
+    var c2 = document.getElementById("c2");
+    var c3 = document.getElementById("c3");
+    var w1 = document.getElementById("w1");
+    var w2 = document.getElementById("w2");
+    var w3 = document.getElementById("w3");
+    var s1 = document.getElementById("s1");
+    var s2 = document.getElementById("s2");
+    var s3 = document.getElementById("s3");
 
+// character hide
+    if (document.getElementById('r1').checked){
+        c2.style.display = "none";
+        c3.style.display = "none";
+    } else {
+        ;
+    }
+
+    if (document.getElementById('r2').checked){
+        c1.style.display = "none";
+        c3.style.display = "none";
+    } else {
+        ;
+    }
+
+    if (document.getElementById('r3').checked){
+        c1.style.display = "none";
+        c2.style.display = "none";
+    } else {
+        ;
+    }
+
+    // weapon hide
+
+    if (document.getElementById('r4').checked){
+        w2.style.display = "none";
+        w3.style.display = "none";
+    } else {
+        ;
+    }
+
+    if (document.getElementById('r5').checked){
+        w1.style.display = "none";
+        w3.style.display = "none";
+    } else {
+        ;
+    }
+
+    if (document.getElementById('r6').checked){
+        w1.style.display = "none";
+        w2.style.display = "none";
+    } else {
+        ;
+    }
+
+    // special hide
+    if (document.getElementById('r7').checked){
+        s2.style.display = "none";
+        s3.style.display = "none";
+    } else {
+        ;
+    }
+
+    if (document.getElementById('r8').checked){
+        s1.style.display = "none";
+        s3.style.display = "none";
+    } else {
+        ;
+    }
+
+    if (document.getElementById('r9').checked){
+        s1.style.display = "none";
+        s2.style.display = "none";
+    } else {
+        ;
+    }
+  }

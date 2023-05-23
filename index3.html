@@ -21,55 +21,82 @@
         <body>
           
 
-
-            
     <form name="myForm">
     <label>
-        <input type="radio" name="characters"  value="50">
-        <img src="" alt="Option 1" height="150px" width="150px" id="myPicture1">
+        
+        <input type="radio" name="characters"  value="50" id="r1" checked >        
+        <img src="" alt="Option 1" height="150px" width="150px" id="c1" >
+    
     </label>
     <label>
-        <input type="radio" name="characters"  value="60">
-        <img src="" alt="Option 1" height="150px" width="150px" id="myPicture2">
+        <input type="radio" name="characters"  value="60" id="r2">
+        
+        <img src="" alt="Option 1" height="150px" width="150px" id="c2">
+    
     </label>
     <label>
-        <input type="radio" name="characters"  value="70">
-        <img src="" alt="Option 1" height="150px" width="150px" id="myPicture3">
+        <input type="radio" name="characters"  value="70" id="r3">
+        
+        <img src="" alt="Option 1" height="150px" width="150px" id="c3">
+        
     </label>
     <br>    
     <label>
-        <input type="radio" name="weapons"  value="50" >
-        <img src="assets/images/shield.png" alt="Option 1" height="150px" width="150px">
+        <input type="radio" name="weapons"  value="50" id="r4">
+        <img src="assets/images/shield.png" alt="Option 1" height="150px" width="150px" id="w1">
     </label>
     <label>
-        <input type="radio" name="weapons"  value="60" >
-        <img src="assets/images/sword.png" alt="Option 1" height="150px" width="150px">
+        <input type="radio" name="weapons"  value="60" id="r5">
+        <img src="assets/images/sword.png" alt="Option 1" height="150px" width="150px" id="w2">
     </label>
     <label>
-        <input type="radio" name="weapons"  value="70" >
-        <img src="assets/images/ballchain.png" alt="Option 1" height="150px" width="150px">
+        <input type="radio" name="weapons"  value="70" id="r6">
+        <img src="assets/images/ballchain.png" alt="Option 1" height="150px" width="150px" id="w3">
     </label>
     <br>
     <label>
-        <input type="radio" name="specials"  value="50" >
-        <img src="assets/images/lightening.png" alt="Option 1" height="150px" width="150px">
+        <input type="radio" name="specials"  value="50" id="r7">
+        <img src="assets/images/lightening.png" alt="Option 1" height="150px" width="150px" id="s1">
     </label>
     <label>
-        <input type="radio" name="specials"  value="60" >
-        <img src="assets/images/fireball.png" alt="Option 1" height="150px" width="150px">
+        <input type="radio" name="specials"  value="60" id="r8">
+        <img src="assets/images/fireball.png" alt="Option 1" height="150px" width="150px" id="s2">
     </label>
     <label>
-        <input type="radio" name="specials"  value="70" >
-        <img src="assets/images/ninja.png" alt="Option 1" height="150px" width="150px">
+        <input type="radio" name="specials"  value="70" id="r9">
+        <img src="assets/images/ninja.png" alt="Option 1" height="150px" width="150px" id="s3">
     </label>
     <br>
     <!-- Hide Selection section later -->
     Selection: <span id="character"></span> and <span id="weapon"></span> and <span id="special"></span>
 </form>
 
-<Button onClick="toggleSelectDropdown()">
-    OK
-</Button>
+<Button onClick="hide()">
+    Select
+</button>
+
+<div>
+    <p>Your Opponnent</p>
+    <br>
+    <img src="assets/images/6.png" alt="Option 1" height="150px" width="150px">
+    <img src="assets/images/shield.png" alt="Option 1" height="150px" width="150px">
+    <img src="assets/images/ninja.png" alt="Option 1" height="150px" width="150px">
+</div>
+
+<div>
+    <p>Battle Score</p>
+    <span id="playerBattleScore">0</span> : <span id="opponentBattleScore">0</span>
+</div>
+
+<div>
+    <!--Fight #1 result-->
+<Button onClick="fight1()">Fight1</Button>
+Fight result: <span id="fightResult1"></span>
+<br>
+</div>
+
+
+
 
 
 <br>
@@ -85,11 +112,6 @@ Score is: <span id = "score"></span>
 Opponent Score: <span id="opponentScore"></span>
 <br>
 <br>
-<!--Fight #1 result-->
-<Button onClick="fight1()">Fight1</Button>
-Fight result: <span id="fightResult1"></span>
-<br>
-<br>
 <!--Fight #2 result-->
 <Button onClick="fight2()">Fight2</Button>
 Fight result: <span id="fightResult2"></span>
@@ -101,7 +123,7 @@ Fight result: <span id="fightResult3"></span>
 
 <br>
 <br>
-Score: <span id="playerBattleScore">0</span> : <span id="opponentBattleScore">0</span>
+
 
 </body>
 </html>

@@ -18,16 +18,20 @@
         
         </head>
         <!-- characters -->
-        <div class="container">
-            <input type="radio" name="slider" id="item-1" checked>
-            <input type="radio" name="slider" id="item-2">
-            <input type="radio" name="slider" id="item-3">
+        <form name="myForm">
+            <label>
+                <input type="radio" name="characters"  value="50">
+                <img src="" alt="Option 1" height="150px" width="150px" id="myPicture1">
+            </label>
+            <input type="radio" name="characters"  id="item-1" value="50" checked>
+            <input type="radio" name="characters"  id="item-2"value="50">
+            <input type="radio" name="characters" id="item-3" value="70">
           <div class="cards">
-            <label class="card" for="item-1" id="song-1" name="characters"  value="50">
+            <label class="card" for="item-1" id="song-1"  >
                     <img src="assets/images/1.png" alt="Option 1">
                 </label>
             <label class="card" for="item-2" id="song-2">
-                <img src="assets/images/2.png" alt="Option 1">
+                <img src="assets/images/2.png" alt="Option 1" >
             </label>
             <label class="card" for="item-3" id="song-3">
                 <img src="assets/images/5.png" alt="Option 1">
@@ -70,109 +74,14 @@
             </div>
           </div>
         </div>
+    </form>
 
-     <!-- Weapons -->
-     <div class="container">
-        <input type="radio" name="slider" id="item-1" checked>
-        <input type="radio" name="slider" id="item-2">
-        <input type="radio" name="slider" id="item-3">
-      <div class="cards">
-        <label class="card" for="item-1" id="song-1" name="characters"  value="50">
-                <img src="assets/images/fireball.png" alt="Option 1">
-            </label>
-        <label class="card" for="item-2" id="song-2">
-            <img src="assets/images/shield.png" alt="Option 1">
-        </label>
-        <label class="card" for="item-3" id="song-3">
-            <img src="assets/images/sword.png" alt="Option 1">
-        </label>
-      </div>
-      <div class="player">
-        <div class="upper-part">
-          <div class="play-icon">
-            <svg width="20" height="20" fill="#2992dc" stroke="#2992dc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-play" viewBox="0 0 24 24">
-              <defs/>
-              <path d="M5 3l14 9-14 9V3z"/>
-            </svg>
-          </div>
-          <div class="info-area" id="test">
-            <label class="song-info" id="song-info-1">
-              <div class="title">Bunker</div>
-              <div class="sub-line">
-                <div class="subtitle">Balthazar</div>
-                <div class="time">4.05</div>
-              </div>
-            </label>
-            <label class="song-info" id="song-info-2">
-              <div class="title">Words Remain</div>
-              <div class="sub-line">
-                <div class="subtitle">Moderator</div>
-                <div class="time">4.05</div>
-              </div>
-            </label>
-            <label class="song-info" id="song-info-3">
-              <div class="title">Falling Out</div>
-              <div class="sub-line">
-                <div class="subtitle">Otzeki</div>
-                <div class="time">4.05</div>
-              </div>
-            </label>
-          </div>
-        </div>
-        <div class="progress-bar">
-          <span class="progress"></span>
-        </div>
-      </div>
-    </div>
 
         <!-- My original stuff below here -->
 
             
 
               <body>
-
-    <form name="myForm">
-    <p>Character</p>
-    <label>
-        <input type="radio" name="characters"  value="50">
-        <img src="assets/images/1.png" alt="Option 1" height="150px" width="150px">
-    </label>
-    <label>
-        <input type="radio" name="characters"  value="60">
-        <img src="assets/images/2.png" alt="Option 1" height="150px" width="150px">
-    </label>
-    <label>
-        <input type="radio" name="characters"  value="70">
-        <img src="assets/images/5.png" alt="Option 1" height="150px" width="150px">
-    </label>
-    <br>    
-    <p>Weapon</p>
-    <label>
-        <input type="radio" name="weapons"  value="50" >
-        <img src="assets/images/shield.png" alt="Option 1" height="150px" width="150px">
-    </label>
-    <label>
-        <input type="radio" name="weapons"  value="60" >
-        <img src="assets/images/sword.png" alt="Option 1" height="150px" width="150px">
-    </label>
-    <label>
-        <input type="radio" name="weapons"  value="70" >
-        <img src="assets/images/ballchain.png" alt="Option 1" height="150px" width="150px">
-    </label>
-    <br>
-    <p>Special</p>
-    <label>
-        <input type="radio" name="specials"  value="50" >
-        <img src="assets/images/lightening.png" alt="Option 1" height="150px" width="150px">
-    </label>
-    <label>
-        <input type="radio" name="specials"  value="60" >
-        <img src="assets/images/fireball.png" alt="Option 1" height="150px" width="150px">
-    </label>
-    <label>
-        <input type="radio" name="specials"  value="70" >
-        <img src="assets/images/ninja.png" alt="Option 1" height="150px" width="150px">
-    </label>
     <br>
     <!-- Hide Selection section later -->
     Selection: <span id="character"></span> and <span id="weapon"></span> and <span id="special"></span>
