@@ -2,6 +2,8 @@ body {
     color: white;
     background-color: black;   
     text-align: center;
+    width: 350px;
+    margin: auto;
 }
 
 img {
@@ -27,10 +29,5 @@ img {
   
   /* CHECKED STYLES */
   [type=radio]:checked + img {
-    outline: 5px solid red;
-
-   
+    outline: 5px solid red;   
   }
-
-  /* hiding radio buttons */
-
