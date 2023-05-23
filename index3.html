@@ -64,14 +64,15 @@
     Selection: <span id="character"></span> and <span id="weapon"></span> and <span id="special"></span>
 </form>
 
-<Button onClick="hide()">
-    Select
+<Button onClick="hide(); characterScore(); createOpponent()">
+    Confirm
 </button>
 
 <div>
     <p>Your Opponnent</p>
     <br>
     <img src="assets/images/6.png" alt="Option 1" height="150px" width="150px">
+    <br>
     <img src="assets/images/shield.png" alt="Option 1" height="150px" width="150px">
     <img src="assets/images/ninja.png" alt="Option 1" height="150px" width="150px">
 </div>
@@ -83,7 +84,7 @@
 
 <div>
     <!--Fight #1 result-->
-<Button onClick="fight1()">Fight1</Button>
+<Button onClick="fight1()" >Fight1</Button>
 Fight result: <span id="fightResult1"></span>
 <br>
 </div>
