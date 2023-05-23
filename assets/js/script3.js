@@ -1,6 +1,7 @@
 
 
 /* Radio buttons */
+
 let character = document.getElementById('character');
 let weapon = document.getElementById('weapon');
 let special = document.getElementById('special');
@@ -69,6 +70,7 @@ function createOpponent() {
     var min = 150;
     var max = 180;
     window.randomOpponent = Math.round(Math.random() * (max - min) + (min));
+    console.log(randomOpponent);
 
     opponentScore.innerHTML = window.randomOpponent;
 }
@@ -96,53 +98,6 @@ function fight1() {
             opponentBattleScore();
           }
 }
-
-//
-
-function fight2() {
-    console.log(window.totalValue);
-    console.log(window.randomOpponent);
-
-    window.characterWinChance = (window.totalValue / (window.totalValue + window.randomOpponent))*100;
-    console.log(window.characterWinChance);
-
-    random = Math.floor(Math.random() * 100) + 1;
-    console.log(random)
-
-    window.winner2 = document.getElementById("fightResult2");
-        
-        if (random <= window.characterWinChance) {
-            window.winner2.innerHTML = "You Win";
-            playerBattleScore();
-          } else {
-            window.winner2.innerHTML = "You Lose";
-            opponentBattleScore();
-          }
-}
-
-//
-
-function fight3() {
-    console.log(window.totalValue);
-    console.log(window.randomOpponent);
-
-    window.characterWinChance = (window.totalValue / (window.totalValue + window.randomOpponent))*100;
-    console.log(window.characterWinChance);
-
-    random = Math.floor(Math.random() * 100) + 1;
-    console.log(random)
-
-    window.winner3 = document.getElementById("fightResult3");
-        
-        if (random <= window.characterWinChance) {
-            window.winner3.innerHTML = "You Win";
-            playerBattleScore();
-          } else {
-            window.winner3.innerHTML = "You Lose";
-            opponentBattleScore();
-          }
-}
-
 // Scores
 function playerBattleScore() {
     let oldScore = parseInt(document.getElementById("playerBattleScore").innerText);
@@ -183,11 +138,16 @@ function hide() {
     var s1 = document.getElementById("s1");
     var s2 = document.getElementById("s2");
     var s3 = document.getElementById("s3");
+    var hideSelectionButton = document.getElementById("confirmSelection");
+
+    
 
 // character hide
     if (document.getElementById('r1').checked){
         c2.style.display = "none";
         c3.style.display = "none";
+        hideSelectionButton.style.display = "none";
+        
     } else {
         ;
     }
@@ -195,6 +155,7 @@ function hide() {
     if (document.getElementById('r2').checked){
         c1.style.display = "none";
         c3.style.display = "none";
+        hideSelectionButton.style.display = "none";
     } else {
         ;
     }
@@ -202,6 +163,7 @@ function hide() {
     if (document.getElementById('r3').checked){
         c1.style.display = "none";
         c2.style.display = "none";
+        hideSelectionButton.style.display = "none";
     } else {
         ;
     }
@@ -211,6 +173,7 @@ function hide() {
     if (document.getElementById('r4').checked){
         w2.style.display = "none";
         w3.style.display = "none";
+        hideSelectionButton.style.display = "none";
     } else {
         ;
     }
@@ -218,6 +181,7 @@ function hide() {
     if (document.getElementById('r5').checked){
         w1.style.display = "none";
         w3.style.display = "none";
+        hideSelectionButton.style.display = "none";
     } else {
         ;
     }
@@ -225,6 +189,7 @@ function hide() {
     if (document.getElementById('r6').checked){
         w1.style.display = "none";
         w2.style.display = "none";
+        hideSelectionButton.style.display = "none";
     } else {
         ;
     }
@@ -233,6 +198,7 @@ function hide() {
     if (document.getElementById('r7').checked){
         s2.style.display = "none";
         s3.style.display = "none";
+        hideSelectionButton.style.display = "none";
     } else {
         ;
     }
@@ -240,6 +206,7 @@ function hide() {
     if (document.getElementById('r8').checked){
         s1.style.display = "none";
         s3.style.display = "none";
+        hideSelectionButton.style.display = "none";
     } else {
         ;
     }
@@ -247,6 +214,7 @@ function hide() {
     if (document.getElementById('r9').checked){
         s1.style.display = "none";
         s2.style.display = "none";
+        hideSelectionButton.style.display = "none";
     } else {
         ;
     }

@@ -19,6 +19,18 @@
         </head>
         
         <body>
+            <!--Header-->
+<section class="wrapper">
+    <div class="top">Battle Godz</div>
+    <div class="bottom" aria-hidden="true">Battle Godz</div>
+</section>
+
+<section class="header">
+    <div class="header">
+        <p>Kill your enemy twice and progress to the next round.</p><!--Extend this to a screen of lore, or multiple, cool intro, and a skip button-->
+    </div>
+</section>
+
           
 
     <form name="myForm">
@@ -64,7 +76,7 @@
     Selection: <span id="character"></span> and <span id="weapon"></span> and <span id="special"></span>
 </form>
 
-<Button onClick="hide(); characterScore(); createOpponent()">
+<Button onClick="hide(); characterScore(); createOpponent()" id="confirmSelection">
     Confirm
 </button>
 
@@ -106,14 +118,6 @@ Score is: <span id = "score"></span>
 Opponent Score: <span id="opponentScore"></span>
 <br>
 <br>
-<!--Fight #2 result-->
-<Button onClick="fight2()">Fight2</Button>
-Fight result: <span id="fightResult2"></span>
-<br>
-<br>
-<!--Fight #3 result-->
-<Button onClick="fight3()">Fight3</Button>
-Fight result: <span id="fightResult3"></span>
 
 <br>
 <br>
