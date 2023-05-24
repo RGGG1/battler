@@ -251,3 +251,4 @@ function decrementBounty() {
     let oldScore = parseInt(document.getElementById("bounty").innerText);
     document.getElementById("bounty").innerText = oldScore - oldScore +1;
 }
+
