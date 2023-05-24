@@ -17,6 +17,7 @@ for(let i = 0; i < char.length; i++) {
         if(this !== prev) {
             prev = this;
             character.textContent = this.value;
+            
                                    
         }
 
@@ -127,7 +128,7 @@ function choosePic() {
      window.document.getElementById("c3").src = character3Group[randomNum3];
 }
 
-/* hiding radio buttons */
+/* confirm selection and hide unselected radio buttons */
 function hide() {
     var c1 = document.getElementById("c1");
     var c2 = document.getElementById("c2");
@@ -139,14 +140,17 @@ function hide() {
     var s2 = document.getElementById("s2");
     var s3 = document.getElementById("s3");
     var hideSelectionButton = document.getElementById("confirmSelection");
+    
 
     
 
 // character hide
+
     if (document.getElementById('r1').checked){
         c2.style.display = "none";
         c3.style.display = "none";
         hideSelectionButton.style.display = "none";
+        window.document.getElementById("you").src = window.document.getElementById("c1").src;
         
     } else {
         ;
