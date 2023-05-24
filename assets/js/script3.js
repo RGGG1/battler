@@ -95,10 +95,13 @@ function fight1() {
             window.winner1.innerHTML = "You Win";
             playerBattleScore();
             incrementBalance();
+            incrementBounty();
+
           } else {
             window.winner1.innerHTML = "You Lose";
             opponentBattleScore();
             decrementBalance();
+            decrementBounty();
           }
 }
 // Scores
@@ -229,7 +232,7 @@ function hide() {
 
   function incrementBalance() {
     let oldScore = parseInt(document.getElementById("balance").innerText);
-    document.getElementById("balance").innerText = ++oldScore +1;
+    document.getElementById("balance").innerText = ++oldScore;
 }
 
 function decrementBalance() {
@@ -237,3 +240,14 @@ function decrementBalance() {
     document.getElementById("balance").innerText = --oldScore -1;
 }
 
+/* Bounty increment and decrement */
+
+function incrementBounty() {
+    let oldScore = parseInt(document.getElementById("bounty").innerText);
+    document.getElementById("bounty").innerText = ++oldScore;
+}
+
+function decrementBounty() {
+    let oldScore = parseInt(document.getElementById("bounty").innerText);
+    document.getElementById("bounty").innerText = oldScore - oldScore +1;
+}
