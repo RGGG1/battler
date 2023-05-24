@@ -94,9 +94,11 @@ function fight1() {
         if (random <= window.characterWinChance) {
             window.winner1.innerHTML = "You Win";
             playerBattleScore();
+            incrementBalance();
           } else {
             window.winner1.innerHTML = "You Lose";
             opponentBattleScore();
+            decrementBalance();
           }
 }
 // Scores
@@ -141,9 +143,6 @@ function hide() {
     var s3 = document.getElementById("s3");
     var hideSelectionButton = document.getElementById("confirmSelection");
     
-
-    
-
 // character hide
 
     if (document.getElementById('r1').checked){
@@ -160,6 +159,7 @@ function hide() {
         c1.style.display = "none";
         c3.style.display = "none";
         hideSelectionButton.style.display = "none";
+        window.document.getElementById("you").src = window.document.getElementById("c2").src;
     } else {
         ;
     }
@@ -168,6 +168,7 @@ function hide() {
         c1.style.display = "none";
         c2.style.display = "none";
         hideSelectionButton.style.display = "none";
+        window.document.getElementById("you").src = window.document.getElementById("c3").src;
     } else {
         ;
     }
@@ -223,3 +224,16 @@ function hide() {
         ;
     }
   }
+
+  /* Coin Balance increment and decrement */
+
+  function incrementBalance() {
+    let oldScore = parseInt(document.getElementById("balance").innerText);
+    document.getElementById("balance").innerText = ++oldScore +1;
+}
+
+function decrementBalance() {
+    let oldScore = parseInt(document.getElementById("balance").innerText);
+    document.getElementById("balance").innerText = --oldScore -1;
+}
+
