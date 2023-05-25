@@ -117,31 +117,94 @@ function opponentBattleScore() {
 
 
 
-// Character Randomisation, no dupes - I also need to repeat it for weapons and specials
+/* Load characters, weapons, specials + randomisation and no dupes + rerolling */
 
-window.onload = choosePic; // I should put this into a div to reload instead of whole page reload, so that we can then offer rerolls.
 
-var character1Group = new Array("assets/images/characters/1.png", "assets/images/characters/2.png", "assets/images/characters/4.png", "assets/images/characters/5.png", "assets/images/characters/6.png", "assets/images/characters/7.png", "assets/images/characters/9.png", "assets/images/characters/10.png");
+    window.addEventListener('load', function() {
+        chooseCharacter();
+      });
+      
+      window.addEventListener('load', function() {
+        chooseWeapon();
+      });
+      
+      window.addEventListener('load', function() {
+        chooseSpecial();
+      });
 
-function choosePic() {
-     var randomNum1 = Math.floor(Math.random() * character1Group.length);
+
+
+
+/* Rerolling*/
+
+var charactersGroup = new Array("assets/images/characters/c1.png", "assets/images/characters/c2.png", "assets/images/characters/c4.png", "assets/images/characters/c5.png", "assets/images/characters/c6.png", "assets/images/characters/c7.png", "assets/images/characters/c9.png", "assets/images/characters/c10.png");
+
+function chooseCharacter() {
+    var randomNum1 = Math.floor(Math.random() * charactersGroup.length);
 
     val=0; 
     while(val==0) {
-    randomNum2=Math.floor(Math.random() * character1Group.length);
+    randomNum2=Math.floor(Math.random() * charactersGroup.length);
     if(randomNum2!=randomNum1 && randomNum2!=randomNum1){val=1;}
     }
 
     val=0;
     while(val==0) {
-    randomNum3=Math.floor(Math.random() * character1Group.length);
+    randomNum3=Math.floor(Math.random() * charactersGroup.length);
     if(randomNum3!=randomNum1 && randomNum3!=randomNum2){val=1;}
     }   
 
-    window.document.getElementById("c1").src = character1Group[randomNum1];
-    window.document.getElementById("c2").src = character1Group[randomNum2];
-    window.document.getElementById("c3").src = character1Group[randomNum3];
+    window.document.getElementById("c1").src = charactersGroup[randomNum1];
+    window.document.getElementById("c2").src = charactersGroup[randomNum2];
+    window.document.getElementById("c3").src = charactersGroup[randomNum3];
 }
+
+var weaponsGroup = new Array("assets/images/weapons/w1.png", "assets/images/weapons/w2.png", "assets/images/weapons/w3.png");
+
+function chooseWeapon() {
+    var randomNum1 = Math.floor(Math.random() * weaponsGroup.length);
+
+   val=0; 
+   while(val==0) {
+   randomNum2=Math.floor(Math.random() * weaponsGroup.length);
+   if(randomNum2!=randomNum1 && randomNum2!=randomNum1){val=1;}
+   }
+
+   val=0;
+   while(val==0) {
+   randomNum3=Math.floor(Math.random() * weaponsGroup.length);
+   if(randomNum3!=randomNum1 && randomNum3!=randomNum2){val=1;}
+   }   
+
+   window.document.getElementById("w1").src = weaponsGroup[randomNum1];
+   window.document.getElementById("w2").src = weaponsGroup[randomNum2];
+   window.document.getElementById("w3").src = weaponsGroup[randomNum3];
+}
+
+var specialsGroup = new Array("assets/images/specials/s1.png", "assets/images/specials/s2.png", "assets/images/specials/s3.png");
+
+function chooseSpecial() {
+    var randomNum1 = Math.floor(Math.random() * specialsGroup.length);
+
+   val=0; 
+   while(val==0) {
+   randomNum2=Math.floor(Math.random() * specialsGroup.length);
+   if(randomNum2!=randomNum1 && randomNum2!=randomNum1){val=1;}
+   }
+
+   val=0;
+   while(val==0) {
+   randomNum3=Math.floor(Math.random() * specialsGroup.length);
+   if(randomNum3!=randomNum1 && randomNum3!=randomNum2){val=1;}
+   }   
+
+   window.document.getElementById("s1").src = specialsGroup[randomNum1];
+   window.document.getElementById("s2").src = specialsGroup[randomNum2];
+   window.document.getElementById("s3").src = specialsGroup[randomNum3];
+}
+
+
+/* Reroll character*/
 
 function rerollCharacter() {
     var randomNum1 = Math.floor(Math.random() * character1Group.length);

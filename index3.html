@@ -33,7 +33,7 @@
 </div>
 
 <div>
-    <p>Your Character</p>
+    <p>Your Battler</p>
     <br>
     <img src="" id="you" >
     <br>
@@ -45,6 +45,7 @@
 
     <form name="myForm">
     <label>
+        <p>Select Character</p>
         <input type="radio" name="characters"  value="50" id="r1" >        
         <img src="" alt="Option 1" id="c1" >
     </label>
@@ -56,8 +57,8 @@
         <input type="radio" name="characters"  value="70" id="r3">
         <img src="" alt="Option 1" id="c3">
     </label>
-    <br>
     <label>
+        <p>Select Weapon</p>
         <input type="radio" name="weapons"  value="50" id="r4">
         <img src="assets/images/weapons/shield.png" alt="Option 1" id="w1">
     </label>
@@ -70,6 +71,7 @@
         <img src="assets/images/weapons/ballchain.png" alt="Option 1" id="w3">
     </label>
     <label>
+        <p>Select Special</p>
         <input type="radio" name="specials"  value="50" id="r7">
         <img src="assets/images/specials/lightening.png" alt="Option 1" id="s1">
     </label>
@@ -90,114 +92,117 @@
 
 <div>
     <br>
-    <button onClick="rerollCharacter()">Reroll: $1</button>
+    <button onClick="chooseCharacter(), chooseWeapon(), chooseSpecial()">Reroll: $1</button>
     <br>
 </div>
+<br>
 
 <Button onClick="hide(); characterScore(); createOpponent()" id="confirmSelection">Confirm Selection</button>
 <br>
 <br>
 <div id="arena">
     <p>Battle Arena</p>
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/1.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/2.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/5.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/6.png" alt="Option 1" id="a1">
-    <img src="assets/images/characters/9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+    <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
 </div>
 
 <div>
     <p>Your Opponnent</p>
     <br>
-    <img src="assets/images/6.png" alt="Option 1" height="150px" width="150px">
+    <img src="assets/images/characters/6.png" alt="Option 1" height="150px" width="150px">
     <br>
-    <img src="assets/images/shield.png" alt="Option 1" height="150px" width="150px">
-    <img src="assets/images/ninja.png" alt="Option 1" height="150px" width="150px">
+    <img src="assets/images/weapons/shield.png" alt="Option 1" height="150px" width="150px">
+    <img src="assets/images/specials/ninja.png" alt="Option 1" height="150px" width="150px">
 </div>
 
 <div>
@@ -211,10 +216,6 @@
 Fight result: <span id="fightResult1"></span>
 <br>
 </div>
-
-
-
-
 
 <br>
 <br>
