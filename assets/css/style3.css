@@ -63,6 +63,14 @@ img {
     width: 100px;    
 }
 
+/*Arena images*/
+#a1 {
+    width: 25px;
+    height: 25px;
+}
+
+
+
 /* image as radio button and hide the actual radio button */
 [type=radio] { 
     position: absolute;
