@@ -117,21 +117,33 @@ function opponentBattleScore() {
 
 
 
-// Character Randomisation - I also need to repeat it for weapons and specials
+// Character Randomisation, no dupes - I also need to repeat it for weapons and specials
+
 window.onload = choosePic; // I should put this into a div to reload instead of whole page reload, so that we can then offer rerolls.
 
-var character1Group = new Array("assets/images/1.png", "assets/images/2.png");
-var character2Group = new Array("assets/images/5.png","assets/images/6.png");
-var character3Group = new Array("assets/images/9.png");
+var character1Group = new Array("assets/images/characters/1.png", "assets/images/characters/2.png", "assets/images/characters/4.png", "assets/images/characters/5.png", "assets/images/characters/6.png", "assets/images/characters/7.png", "assets/images/characters/9.png", "assets/images/characters/10.png");
 
 function choosePic() {
      var randomNum1 = Math.floor(Math.random() * character1Group.length);
-     var randomNum2 = Math.floor(Math.random() * character2Group.length);
-     var randomNum3 = Math.floor(Math.random() * character3Group.length);
-     window.document.getElementById("c1").src = character1Group[randomNum1];
-     window.document.getElementById("c2").src = character2Group[randomNum2];
-     window.document.getElementById("c3").src = character3Group[randomNum3];
+
+     val=0; 
+    while(val==0) {
+    randomNum2=Math.floor(Math.random() * character1Group.length);
+    if(randomNum2!=randomNum1 && randomNum2!=randomNum1){val=1;}
+    }
+
+    val=0;
+    while(val==0) {
+    randomNum3=Math.floor(Math.random() * character1Group.length);
+    if(randomNum3!=randomNum1 && randomNum3!=randomNum2){val=1;}
+    }   
+
+    window.document.getElementById("c1").src = character1Group[randomNum1];
+    window.document.getElementById("c2").src = character1Group[randomNum2];
+    window.document.getElementById("c3").src = character1Group[randomNum3];
 }
+
+  
 
 /* confirm selection and hide unselected radio buttons */
 function hide() {
