@@ -245,29 +245,23 @@ function hide() {
 // character hide
 
     if (document.getElementById('r1').checked){
-        c2.style.display = "none";
-        c3.style.display = "none";
-        hideSelectionButton.style.display = "none";
-        window.document.getElementById("you").src = window.document.getElementById("c1").src;
+        playerSelect.style.display = "none";
+        window.document.getElementById("cSelect").src = window.document.getElementById("c1").src;
         
     } else {
         ;
     }
 
     if (document.getElementById('r2').checked){
-        c1.style.display = "none";
-        c3.style.display = "none";
-        hideSelectionButton.style.display = "none";
-        window.document.getElementById("you").src = window.document.getElementById("c2").src;
+        playerSelect.style.display = "none";
+        window.document.getElementById("cSelect").src = window.document.getElementById("c2").src;
     } else {
         ;
     }
 
     if (document.getElementById('r3').checked){
-        c1.style.display = "none";
-        c2.style.display = "none";
-        hideSelectionButton.style.display = "none";
-        window.document.getElementById("you").src = window.document.getElementById("c3").src;
+        playerSelect.style.display = "none";
+        window.document.getElementById("cSelect").src = window.document.getElementById("c3").src;
     } else {
         ;
     }
@@ -275,50 +269,41 @@ function hide() {
     // weapon hide
 
     if (document.getElementById('r4').checked){
-        w2.style.display = "none";
-        w3.style.display = "none";
-        hideSelectionButton.style.display = "none";
+        playerSelect.style.display = "none";
+        window.document.getElementById("wSelect").src = window.document.getElementById("w1").src;
     } else {
         ;
     }
 
     if (document.getElementById('r5').checked){
-        w1.style.display = "none";
-        w3.style.display = "none";
-        hideSelectionButton.style.display = "none";
+        playerSelect.style.display = "none";
+        window.document.getElementById("wSelect").src = window.document.getElementById("w2").src;
     } else {
         ;
     }
 
     if (document.getElementById('r6').checked){
-        w1.style.display = "none";
-        w2.style.display = "none";
-        hideSelectionButton.style.display = "none";
+        playerSelect.style.display = "none";
+        window.document.getElementById("wSelect").src = window.document.getElementById("w3").src;
     } else {
         ;
     }
 
     // special hide
     if (document.getElementById('r7').checked){
-        s2.style.display = "none";
-        s3.style.display = "none";
-        hideSelectionButton.style.display = "none";
+        window.document.getElementById("sSelect").src = window.document.getElementById("s1").src;
     } else {
         ;
     }
 
     if (document.getElementById('r8').checked){
-        s1.style.display = "none";
-        s3.style.display = "none";
-        hideSelectionButton.style.display = "none";
+        window.document.getElementById("sSelect").src = window.document.getElementById("s2").src;
     } else {
         ;
     }
 
     if (document.getElementById('r9').checked){
-        s1.style.display = "none";
-        s2.style.display = "none";
-        hideSelectionButton.style.display = "none";
+        window.document.getElementById("sSelect").src = window.document.getElementById("s3").src;
     } else {
         ;
     }
