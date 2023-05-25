@@ -126,7 +126,7 @@ var character1Group = new Array("assets/images/characters/1.png", "assets/images
 function choosePic() {
      var randomNum1 = Math.floor(Math.random() * character1Group.length);
 
-     val=0; 
+    val=0; 
     while(val==0) {
     randomNum2=Math.floor(Math.random() * character1Group.length);
     if(randomNum2!=randomNum1 && randomNum2!=randomNum1){val=1;}
@@ -143,6 +143,27 @@ function choosePic() {
     window.document.getElementById("c3").src = character1Group[randomNum3];
 }
 
+function rerollCharacter() {
+    var randomNum1 = Math.floor(Math.random() * character1Group.length);
+
+   val=0; 
+   while(val==0) {
+   randomNum2=Math.floor(Math.random() * character1Group.length);
+   if(randomNum2!=randomNum1 && randomNum2!=randomNum1){val=1;}
+   }
+
+   val=0;
+   while(val==0) {
+   randomNum3=Math.floor(Math.random() * character1Group.length);
+   if(randomNum3!=randomNum1 && randomNum3!=randomNum2){val=1;}
+   }   
+
+   window.document.getElementById("c1").src = character1Group[randomNum1];
+   window.document.getElementById("c2").src = character1Group[randomNum2];
+   window.document.getElementById("c3").src = character1Group[randomNum3];
+}
+
+ 
   
 
 /* confirm selection and hide unselected radio buttons */
