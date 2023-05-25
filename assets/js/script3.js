@@ -117,7 +117,7 @@ function opponentBattleScore() {
 
 
 
-/* Load characters, weapons, specials + randomisation and no dupes + rerolling */
+/* Load characters, weapons, specials + randomisation and no dupes */
 
 
     window.addEventListener('load', function() {
@@ -132,10 +132,6 @@ function opponentBattleScore() {
         chooseSpecial();
       });
 
-
-
-
-/* Rerolling*/
 
 var charactersGroup = new Array("assets/images/characters/c1.png", "assets/images/characters/c2.png", "assets/images/characters/c4.png", "assets/images/characters/c5.png", "assets/images/characters/c6.png", "assets/images/characters/c7.png", "assets/images/characters/c9.png", "assets/images/characters/c10.png");
 
@@ -204,30 +200,6 @@ function chooseSpecial() {
 }
 
 
-/* Reroll character*/
-
-function rerollCharacter() {
-    var randomNum1 = Math.floor(Math.random() * character1Group.length);
-
-   val=0; 
-   while(val==0) {
-   randomNum2=Math.floor(Math.random() * character1Group.length);
-   if(randomNum2!=randomNum1 && randomNum2!=randomNum1){val=1;}
-   }
-
-   val=0;
-   while(val==0) {
-   randomNum3=Math.floor(Math.random() * character1Group.length);
-   if(randomNum3!=randomNum1 && randomNum3!=randomNum2){val=1;}
-   }   
-
-   window.document.getElementById("c1").src = character1Group[randomNum1];
-   window.document.getElementById("c2").src = character1Group[randomNum2];
-   window.document.getElementById("c3").src = character1Group[randomNum3];
-}
-
- 
-  
 
 /* confirm selection and hide unselected radio buttons */
 function hide() {
@@ -240,14 +212,13 @@ function hide() {
     var s1 = document.getElementById("s1");
     var s2 = document.getElementById("s2");
     var s3 = document.getElementById("s3");
-    var hideSelectionButton = document.getElementById("confirmSelection");
     
 // character hide
 
     if (document.getElementById('r1').checked){
         playerSelect.style.display = "none";
         window.document.getElementById("cSelect").src = window.document.getElementById("c1").src;
-        
+        playerBattler.style.display = "block";       
     } else {
         ;
     }
@@ -255,6 +226,7 @@ function hide() {
     if (document.getElementById('r2').checked){
         playerSelect.style.display = "none";
         window.document.getElementById("cSelect").src = window.document.getElementById("c2").src;
+        playerBattler.style.display = "block";
     } else {
         ;
     }
@@ -262,6 +234,7 @@ function hide() {
     if (document.getElementById('r3').checked){
         playerSelect.style.display = "none";
         window.document.getElementById("cSelect").src = window.document.getElementById("c3").src;
+        playerBattler.style.display = "block";
     } else {
         ;
     }
@@ -269,21 +242,18 @@ function hide() {
     // weapon hide
 
     if (document.getElementById('r4').checked){
-        playerSelect.style.display = "none";
         window.document.getElementById("wSelect").src = window.document.getElementById("w1").src;
     } else {
         ;
     }
 
     if (document.getElementById('r5').checked){
-        playerSelect.style.display = "none";
         window.document.getElementById("wSelect").src = window.document.getElementById("w2").src;
     } else {
         ;
     }
 
     if (document.getElementById('r6').checked){
-        playerSelect.style.display = "none";
         window.document.getElementById("wSelect").src = window.document.getElementById("w3").src;
     } else {
         ;
