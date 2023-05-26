@@ -39,20 +39,37 @@
     <img src="" id="wSelect" >
     <img src="" id="sSelect" >
     <br>
-    <p>Click to expand profile</p>
+    <br>
+    <Button onclick="expandProfile()">Expand Profile</Button>
 </div>
-<div id="userProfile">
+<div id="userProfile" hidden>
     <p>Strength: <span id = "strength">0 </span>
-    <Button onclick="decrementBalance(), incrementStrength();">+</Button></p>
+    <br>
+    <Button onclick="decrementBalance(), incrementStrength();">+</Button>
+     / 
+    <Button onclick="incrementBalance(), decrementStrength();">-</Button>
+    </p>
     
     <p>Speed: <span id = "speed">0 </span>
-    <Button onclick="decrementBalance(), incrementSpeed();">+</Button></p>
+    <br>
+    <Button onclick="decrementBalance(), incrementSpeed();">+</Button>
+     / 
+    <Button onclick="incrementBalance(), decrementSpeed();">-</Button>
+    </p>
     
     <p>Agility: <span id = "agility">0 </span>
-    <Button onclick="decrementBalance(), incrementAgility();">+</Button></p>
+    <br>
+    <Button onclick="decrementBalance(), incrementAgility();">+</Button>
+     / 
+    <Button onclick="incrementBalance(), decrementAgility();">-</Button>
+    </p>
     
     <p>Battle IQ: <span id = "iq">0 </span>
-    <Button onclick="decrementBalance(), incrementIQ();">+</Button></p>
+    <br>
+    <Button onclick="decrementBalance(), incrementIQ();">+</Button>
+     / 
+    <Button onclick="incrementBalance(), decrementIQ();">-</Button>
+    </p>
    
 </div>
 <br>

@@ -279,7 +279,7 @@ function hide() {
     }
   }
 
-  /* Coin Balance increment and decrement */
+ /* Coin Balance increment and decrement */
 
   function incrementBalance() {
     let oldScore = parseInt(document.getElementById("balance").innerText);
@@ -291,30 +291,52 @@ function decrementBalance() {
     document.getElementById("balance").innerText = --oldScore;
 }
 
-/* increment profile variables - user controlled */
 
+/* increment and decrement profile variables - user controlled - Strength, Speed, Agility, IQ */
+
+// Strength
 function incrementStrength() {
     let oldStrength = parseInt(document.getElementById("strength").innerText);
     document.getElementById("strength").innerText = ++oldStrength;
 }
 
+function decrementStrength() {
+    let oldStrength = parseInt(document.getElementById("strength").innerText);
+    document.getElementById("strength").innerText = --oldStrength;
+}
+
+// Speed
 function incrementSpeed() {
     let oldSpeed = parseInt(document.getElementById("speed").innerText);
     document.getElementById("speed").innerText = ++oldSpeed;
 }
 
+function decrementSpeed() {
+    let oldSpeed = parseInt(document.getElementById("speed").innerText);
+    document.getElementById("speed").innerText = --oldSpeed;
+}
+
+// Agility
 function incrementAgility() {
     let oldAgility = parseInt(document.getElementById("agility").innerText);
     document.getElementById("agility").innerText = ++oldAgility;
 }
 
+function decrementAgility() {
+    let oldAgility = parseInt(document.getElementById("agility").innerText);
+    document.getElementById("agility").innerText = --oldAgility;
+}
+
+// IQ
 function incrementIQ() {
     let oldIQ = parseInt(document.getElementById("iq").innerText);
     document.getElementById("iq").innerText = ++oldIQ;
 }
 
-
-
+function decrementIQ() {
+    let oldIQ = parseInt(document.getElementById("iq").innerText);
+    document.getElementById("iq").innerText = --oldIQ;
+}
 
 
 /* Bounty increment and decrement */
@@ -329,3 +351,13 @@ function decrementBounty() {
     document.getElementById("bounty").innerText = oldScore - oldScore +1;
 }
 
+/* Show and Hide Profile */
+
+function expandProfile() {
+    var profile = document.getElementById('userProfile');
+    if (window.getComputedStyle(profile).display === "none") {
+        profile.style.display = "block";     
+    } else {
+        profile.style.display = "none";
+    }
+}
