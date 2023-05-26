@@ -288,8 +288,34 @@ function hide() {
 
 function decrementBalance() {
     let oldScore = parseInt(document.getElementById("balance").innerText);
-    document.getElementById("balance").innerText = --oldScore -1;
+    document.getElementById("balance").innerText = --oldScore;
 }
+
+/* increment profile variables - user controlled */
+
+function incrementStrength() {
+    let oldStrength = parseInt(document.getElementById("strength").innerText);
+    document.getElementById("strength").innerText = ++oldStrength;
+}
+
+function incrementSpeed() {
+    let oldSpeed = parseInt(document.getElementById("speed").innerText);
+    document.getElementById("speed").innerText = ++oldSpeed;
+}
+
+function incrementAgility() {
+    let oldAgility = parseInt(document.getElementById("agility").innerText);
+    document.getElementById("agility").innerText = ++oldAgility;
+}
+
+function incrementIQ() {
+    let oldIQ = parseInt(document.getElementById("iq").innerText);
+    document.getElementById("iq").innerText = ++oldIQ;
+}
+
+
+
+
 
 /* Bounty increment and decrement */
 

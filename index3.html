@@ -41,6 +41,20 @@
     <br>
     <p>Click to expand profile</p>
 </div>
+<div id="userProfile">
+    <p>Strength: <span id = "strength">0 </span>
+    <Button onclick="decrementBalance(), incrementStrength();">+</Button></p>
+    
+    <p>Speed: <span id = "speed">0 </span>
+    <Button onclick="decrementBalance(), incrementSpeed();">+</Button></p>
+    
+    <p>Agility: <span id = "agility">0 </span>
+    <Button onclick="decrementBalance(), incrementAgility();">+</Button></p>
+    
+    <p>Battle IQ: <span id = "iq">0 </span>
+    <Button onclick="decrementBalance(), incrementIQ();">+</Button></p>
+   
+</div>
 <br>
 <br>
           
@@ -94,7 +108,7 @@
 
 <div>
     <br>
-    <button onClick="chooseCharacter(), chooseWeapon(), chooseSpecial()">Reroll: $1</button>
+    <button onClick="chooseCharacter(), chooseWeapon(), chooseSpecial(), decrementBalance()">Reroll: $1</button>
     <br>
 </div>
 <br>

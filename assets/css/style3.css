@@ -71,8 +71,6 @@ img {
 }
 
 
-
-
 /* image as radio button and hide the actual radio button */
 [type=radio] { 
     position: absolute;
@@ -80,6 +78,7 @@ img {
     width: 0;
     height: 0;
   }
+
   
   /* IMAGE STYLES */
   [type=radio] + img {
