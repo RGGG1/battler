@@ -63,8 +63,10 @@ img {
     width: 100px;    
 }
 
-/* Player Variables */
-.playerVariables {
+
+
+/* User balances / bounty / Player Variables */
+.playerVariables, .userBalances, .userBounty {
     float: left;
     width: 25%;
     padding: 5px;
