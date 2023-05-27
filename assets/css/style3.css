@@ -60,24 +60,28 @@ body {
 
 img {
     height: 100px;
-    width: 100px;    
+    width: 100px; 
+       
 }
 
 
 
 /* User balances / bounty / Player Variables */
-.playerVariables {
-    float: left;
-    width: 25%;
-    padding: 5px;
-  }
+
+
 
 .userBalances, .userBounty {
     float: left;
     width: 50%;
-    padding: 5px;
     text-align: center;
-  }
+}
+
+.playerVariables {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+
 
 /*Arena images*/
 #a1 {
