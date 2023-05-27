@@ -55,7 +55,11 @@ function characterScore()
         window.characterValue = parseInt(character.textContent);
         window.weaponValue = parseInt(weapon.textContent);
         window.specialValue = parseInt(special.textContent);
-        window.totalValue = (window.characterValue + window.weaponValue + window.specialValue);
+        window.var1 =  parseInt(v1.textContent);
+        window.var2 =  parseInt(v2.textContent);
+        window.var3 =  parseInt(v3.textContent);
+        window.var4 =  parseInt(v4.textContent);
+        window.totalValue = (window.characterValue + window.weaponValue + window.specialValue + window.var1 + window.var2 + window.var3 + window.var4);
         console.log(totalValue);
         
         score.innerHTML = window.totalValue;    
@@ -80,7 +84,8 @@ function createOpponent() {
 // Fight Character vs opponent - NOTE I MAY ONLY NEED ONE FIGHT FUNCTION, if I can log the scores for each fight somehow to use for stats later
 
 function fight1() {
-    console.log(window.totalValue);
+    characterScore(); // updates based on the user variable values chosen by user
+    console.log(window.totalValue); 
     console.log(window.randomOpponent);
 
     window.characterWinChance = (window.totalValue / (window.totalValue + window.randomOpponent))*100;
@@ -292,52 +297,51 @@ function decrementBalance() {
 }
 
 
-/* increment and decrement profile variables - user controlled - Strength, Speed, Agility, IQ */
+/* increment and decrement profile variables - user controlled */
 
-// Strength
-function incrementStrength() {
-    let oldStrength = parseInt(document.getElementById("strength").innerText);
-    document.getElementById("strength").innerText = ++oldStrength;
+// V1
+function incrementV1() {
+    let oldV1 = parseInt(document.getElementById("v1").innerText);
+    document.getElementById("v1").innerText = ++oldV1;
 }
 
-function decrementStrength() {
-    let oldStrength = parseInt(document.getElementById("strength").innerText);
-    document.getElementById("strength").innerText = --oldStrength;
+function decrementV1() {
+    let oldV1 = parseInt(document.getElementById("v1").innerText);
+    document.getElementById("v1").innerText = --oldV1;
 }
 
-// Speed
-function incrementSpeed() {
-    let oldSpeed = parseInt(document.getElementById("speed").innerText);
-    document.getElementById("speed").innerText = ++oldSpeed;
+// V2
+function incrementV2() {
+    let oldV2 = parseInt(document.getElementById("v2").innerText);
+    document.getElementById("v2").innerText = ++oldV2;
 }
 
-function decrementSpeed() {
-    let oldSpeed = parseInt(document.getElementById("speed").innerText);
-    document.getElementById("speed").innerText = --oldSpeed;
+function decrementV2() {
+    let oldV2 = parseInt(document.getElementById("v2").innerText);
+    document.getElementById("v2").innerText = --oldV2;
 }
 
-// Agility
-function incrementAgility() {
-    let oldAgility = parseInt(document.getElementById("agility").innerText);
-    document.getElementById("agility").innerText = ++oldAgility;
+// V3
+function incrementV3() {
+    let oldV3 = parseInt(document.getElementById("v3").innerText);
+    document.getElementById("v3").innerText = ++oldV3;
 }
 
-function decrementAgility() {
-    let oldAgility = parseInt(document.getElementById("agility").innerText);
-    document.getElementById("agility").innerText = --oldAgility;
+function decrementV3() {
+    let oldV3 = parseInt(document.getElementById("v3").innerText);
+    document.getElementById("v3").innerText = --oldV3;
 }
 
-// IQ
-function incrementIQ() {
-    let oldIQ = parseInt(document.getElementById("iq").innerText);
-    document.getElementById("iq").innerText = ++oldIQ;
+// V4
+function incrementV4() {
+    let oldV4 = parseInt(document.getElementById("v4").innerText);
+    document.getElementById("v4").innerText = ++oldV4;
 }
 
-function decrementIQ() {
-    let oldIQ = parseInt(document.getElementById("iq").innerText);
-    document.getElementById("iq").innerText = --oldIQ;
+function decrementV4() {
+    let oldV4 = parseInt(document.getElementById("v4").innerText);
+    document.getElementById("v4").innerText = --oldV4;
 }
-
 
 /* Bounty increment and decrement */
 

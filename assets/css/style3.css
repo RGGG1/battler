@@ -63,6 +63,12 @@ img {
     width: 100px;    
 }
 
+/* Player Variables */
+.playerVariables {
+    float: left;
+    width: 25%;
+    padding: 5px;
+  }
 
 /*Arena images*/
 #a1 {
