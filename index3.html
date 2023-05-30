@@ -1,40 +1,53 @@
  <html lang="en">
 
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-            <!-- font awesome and google fonts -->
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-                integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-            <link rel="stylesheet" href="assets/css/style3.css">
+    <!-- font awesome and google fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style3.css">
             
-            <!-- Description, Kyewords, Title -->
-            <title>Battler</title>
-            <meta name="description" content="Fast Action Battle Game">
-            <meta name="keywords" content="Mobile game, cool new apps, fun mobile games, auto battler">
+    <!-- Description, Kyewords, Title -->
+    <title>Battler</title>
+        <meta name="description" content="Fast Action Battle Game">
+        <meta name="keywords" content="Mobile game, cool new apps, fun mobile games, auto battler">
+</head>
         
-        </head>
-        
-        <body>
-            <!--Header-->
-<section class="wrapper">
-    <div class="top">Battle Godz</div>
-    <div class="bottom" aria-hidden="true">Battle Godz</div>
-</section>
+<body>
 
+    <!-- Logo -->
+    <section class="wrapper">
+        <div class="top">Battle Godz</div>
+        <div class="bottom" aria-hidden="true">Battle Godz</div>
+    </section>
 
-    <div class="userBalances">
-    <p><i class="fas fa-coins"> </i><span id="balance"> 10</span></p>
+    <!-- User Nav -->
+    <div id="userNav">
+        <br>
+        <br>
+        <button id="profileButton" onclick="navProfile();">Profile</button>
+        <button id="armouryButton" onclick="navArmoury();">Armoury</button>
+        <button id="storeButton" onclick="navStore();">Store</button>
     </div>
-    <div class="userBounty">
-    <p ><i class="fas fa-bullseye"></i> <span id="bounty"> 1</span></p>
+
+
+    <!-- User Profile -->
+    <div id="profile" hidden>
+        <div id="balances">
+            <div class="userBalances">
+                <p><i class="fas fa-coins"> </i><span id="balance"> 10</span></p>
+            </div>
+        <div class="userBounty">
+            <p ><i class="fas fa-bullseye"></i> <span id="bounty"> 1</span></p>
+        </div>
     </div>
 
 
-<div id="playerBattler" >
+<div id="playerBattler" hidden>
     <br>
     <div class="selects">   
         <img src="" id="cSelect">
@@ -44,14 +57,14 @@
         <br>
     </div> 
 
-<div id="userProfile">
+    <div id="userProfile">
     <!--V1-->
-    <div class="playerVariables">
-    <i class="fa fa-bolt" aria-hidden="true">: </i> <span id = "v1"> 0 </span>
+        <div class="playerVariables">
+        <i class="fa fa-bolt" aria-hidden="true">: </i> <span id = "v1"> 0 </span>
     <br>
-    <Button onclick="decrementBalance(), incrementV1();">+</Button>
-     / 
-    <Button onclick="incrementBalance(), decrementV1();">-</Button>
+        <Button onclick="decrementBalance(), incrementV1();">+</Button>
+         / 
+        <Button onclick="incrementBalance(), decrementV1();">-</Button>
     
     </div>
     
@@ -61,8 +74,7 @@
     <br>
     <Button onclick="decrementBalance(), incrementV2();">+</Button>
      / 
-    <Button onclick="incrementBalance(), decrementV2();">-</Button>
-    
+    <Button onclick="incrementBalance(), decrementV2();">-</Button>    
     </div>
     
     <!--V3-->
@@ -71,8 +83,7 @@
     <br>
     <Button onclick="decrementBalance(), incrementV3();">+</Button>
      / 
-    <Button onclick="incrementBalance(), decrementV3();">-</Button>
-    
+    <Button onclick="incrementBalance(), decrementV3();">-</Button>    
     </div>
     
     <!--V4-->
@@ -81,14 +92,15 @@
     <br>
     <Button onclick="decrementBalance(), incrementV4();">+</Button>
      / 
-    <Button onclick="incrementBalance(), decrementV4();">-</Button>
-    
+    <Button onclick="incrementBalance(), decrementV4();">-</Button>    
     </div>
 </div>
 </div>
 <br>
 <br>
-          
+</div>
+
+<div id="armoury">Armoury
 <div id="playerSelect">
     <form name="myForm">
     <label>
@@ -147,8 +159,15 @@
 <Button onClick="hide(); characterScore(); createOpponent()" id="confirmSelection">Confirm Selection</button>
 </div>
 </div>
+</div>
+
+<!-- Store Section -->
+<div id="store">Store</div>
 <br>
 <br>
+
+
+<!-- Battle Arena -->
 <div id="battleArena">
     <p>Battle Arena</p>
     <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">

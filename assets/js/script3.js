@@ -365,3 +365,48 @@ function expandProfile() {
         profile.style.display = "none";
     }
 }
+
+/* Nav show hide sections */
+
+function navProfile() {
+    var profile = document.getElementById('profile');
+    var armoury = document.getElementById('armoury');
+    var store = document.getElementById('store');
+    if (window.getComputedStyle(profile).display === "block") {
+        ;
+        
+    } else {
+        profile.style.display = "block";
+        armoury.style.display = "none";
+        store.style.display = "none";
+    }
+
+}
+
+function navArmoury() {
+    var profile = document.getElementById('profile');
+    var armoury = document.getElementById('armoury');
+    var store = document.getElementById('store');
+    if (window.getComputedStyle(armoury).display === "block") {
+        ;
+        
+    } else {
+        profile.style.display = "none";
+        armoury.style.display = "block";
+        store.style.display = "none";
+    }
+}
+
+function navStore() {
+    var profile = document.getElementById('profile');
+    var armoury = document.getElementById('armoury');
+    var store = document.getElementById('store');
+    if (window.getComputedStyle(store).display === "block") {
+        ;
+        
+    } else {
+        profile.style.display = "none";
+        armoury.style.display = "none";
+        store.style.display = "block";
+    }
+}
