@@ -61,7 +61,7 @@ body {
 /* Top Section */
 
 #topProfile, #topStats, #topBalances {
-    width: 30%;
+    width: auto;
     height: 50px;
     display: inline-block;
 }
