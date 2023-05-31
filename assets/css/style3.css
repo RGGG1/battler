@@ -58,6 +58,24 @@ body {
     margin: auto;
 }
 
+/* Top Section */
+
+#topProfile, #topStats, #topBalances {
+    width: 30%;
+    height: 50px;
+    display: inline-block;
+}
+
+#topProfile img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+
+/* selects */
+
 img {
     height: 100px;
     width: 100px; 
