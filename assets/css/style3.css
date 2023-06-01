@@ -61,7 +61,7 @@ body {
 /* Top Section */
 
 #topProfile, #topStats, #topBalances {
-    width: auto;
+    width: 30%;
     height: 50px;
     display: inline-block;
 }
@@ -78,8 +78,7 @@ body {
 
 img {
     height: 100px;
-    width: 100px; 
-       
+    width: 100px;    
 }
 
 
