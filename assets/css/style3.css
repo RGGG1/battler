@@ -61,14 +61,14 @@ body {
 /* Top Section */
 
 #topUserProfile, #topStats, #topBalances {
-    width: 30%;
-    height: 50px;
+    width: 33%;
+    height: 75px;
     display: inline-block;
 }
 
 #topUserProfile img{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
 }
 
@@ -140,18 +140,7 @@ img {
     user-select: none;
   }
   
-  details>summary span.icon {
-    width: 24px;
-    height: 24px;
-    transition: all 0.3s;
-    margin-left: auto;
-  }
-  
-  details[open] summary span.icon {
-    transform: rotate(180deg);
-  }
-  
-  summary {
+ summary {
     width: 100%;
     display: flex;
     cursor: pointer;

@@ -296,6 +296,21 @@ function decrementBalance() {
     document.getElementById("balance").innerText = --oldScore;
 }
 
+/* Bounty increment and decrement */
+
+function incrementBounty() {
+    let oldScore = parseInt(document.getElementById("bounty").innerText);
+    document.getElementById("bounty").innerText = ++oldScore;
+
+    let oldHouseBountyBalance = parseInt(document.getElementById("houseBountyBalance").innerText);
+    document.getElementById("houseBountyBalance").innerText = --oldHouseBountyBalance;
+}
+
+function decrementBounty() {
+    let oldScore = parseInt(document.getElementById("bounty").innerText);
+    document.getElementById("bounty").innerText = oldScore - oldScore +1;
+}
+
 
 /* increment and decrement profile variables - user controlled */
 
@@ -343,17 +358,7 @@ function decrementV4() {
     document.getElementById("v4").innerText = --oldV4;
 }
 
-/* Bounty increment and decrement */
 
-function incrementBounty() {
-    let oldScore = parseInt(document.getElementById("bounty").innerText);
-    document.getElementById("bounty").innerText = ++oldScore;
-}
-
-function decrementBounty() {
-    let oldScore = parseInt(document.getElementById("bounty").innerText);
-    document.getElementById("bounty").innerText = oldScore - oldScore +1;
-}
 
 /* Show and Hide Profile */
 

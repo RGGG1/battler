@@ -30,26 +30,97 @@
 <section id="user">
     <br>
     <br>
-    <section id="topUserProfile">
-        <img src="" id="cSelect">
-        <img src="" id="wSelect">
-        <img src="" id="sSelect">
+    <details>
+        <summary>
+            <section id="topUserProfile">
+                <img src="" id="cSelect">
+                <img src="" id="wSelect">
+                <img src="" id="sSelect">
+            </section>
+
+            <section id="topStats">
+                <i class="fa fa-bolt" aria-hidden="true">&nbsp;&nbsp;</i>
+                <i class="fas fa-dumbbell">&nbsp;&nbsp;</i>
+                <i class="fas fa-skull-crossbones">&nbsp;&nbsp;</i>
+                <i class="fas fa-yin-yang">&nbsp;&nbsp;</i>
+                <br>
+                29&nbsp;&nbsp;64&nbsp;&nbsp;31&nbsp;&nbsp;55
+            </section>
+                
+            <section id="topBalances">
+                <i class="fas fa-bullseye"> </i>
+                <br>
+                <span id="bounty"> 1</span></p>
+            </section>
+        </summary>
+
+        <!-- User Profile -->
+        <div id="profile">
+            <div id="balances">
+                <div class="userBalances">
+                    <p><i class="fas fa-coins"> </i><span id="balance"> 10</span></p>
+                </div>
+
+                <div class="userBounty">
+                    <p><i class="fas fa-bullseye"></i> <span id="bounty"> 1</span></p>
+                </div>
+            </div>
+
+
+            <div id="playerBattler" hidden>
+            <br>
+                <div class="selects">   
+                    <img src="" id="cSelect">
+                    <img src="" id="wSelect">
+                    <img src="" id="sSelect">
+                    <br>
+                    <br>
+                </div> 
+
+            <div id="userProfile">
+                <!--V1-->
+                <div class="playerVariables">
+                    <i class="fa fa-bolt" aria-hidden="true"></i>: <span id = "v1"> 0 </span>
+                    <br>
+                    <Button onclick="decrementBalance(), incrementV1();">+</Button>
+                    / 
+                    <Button onclick="incrementBalance(), decrementV1();">-</Button>
+                </div>
+
+                <!--V2-->
+                <div class="playerVariables">
+                    <i class="fas fa-dumbbell"></i>: <span id = "v2"> 0 </span>
+                    <br>
+                    <Button onclick="decrementBalance(), incrementV2();">+</Button>
+                    / 
+                    <Button onclick="incrementBalance(), decrementV2();">-</Button>    
+                </div>
+
+                <!--V3-->
+                <div class="playerVariables">
+                    <i class="fas fa-skull-crossbones"></i>: <span id = "v3"> 0 </span>
+                    <br>
+                    <Button onclick="decrementBalance(), incrementV3();">+</Button>
+                    / 
+                    <Button onclick="incrementBalance(), decrementV3();">-</Button>    
+                </div>
+
+                <!--V4-->
+                <div class="playerVariables">
+                    <i class="fas fa-yin-yang"></i>: <span id = "v4"> 0 </span>
+                    <br>
+                    <Button onclick="decrementBalance(), incrementV4();">+</Button>
+                    / 
+                    <Button onclick="incrementBalance(), decrementV4();">-</Button>    
+                </div>
+            </div>
+            </div>
         <br>
-    </section>
-    <section id="topStats">
         <br>
-        <i class="fa fa-bolt" aria-hidden="true"></i>
-        <i class="fas fa-dumbbell"></i>
-        <i class="fas fa-skull-crossbones"></i>
-        <i class="fas fa-yin-yang"></i>
-       <br>
-        29    64    31    55
-    </section>
-    <section id="topBalances">
-        <i class="fas fa-coins"> </i>
-        <br>
-        77
-    </section>
+        </div>
+    </details>
+    <br>
+    <br>
 </section>
 
 
@@ -60,10 +131,9 @@
         <img src="assets/images/characters/c1.png">
         <img src="assets/images/weapons/w1.png">
         <img src="assets/images/specials/s1.png">
-        <br>
     </section>
+
     <section id="topStats">
-        <br>
         <i class="fa fa-bolt" aria-hidden="true"></i>
         <i class="fas fa-dumbbell"></i>
         <i class="fas fa-skull-crossbones"></i>
@@ -72,177 +142,27 @@
         29    64    31    55
     </section>
     <section id="topBalances">
-        <i class="fas fa-coins"> </i>
+        <i class="fas fa-bullseye"> </i>
         <br>
-        77            
+        4            
     </section>
-</summary>
+    
+    </summary>
+    
+    <br>
 <button>Fight</button>
+<br>
+    <br>
 </details>
 </section>
 
-<section id="user">
-    <section id="topUserProfile">
-        <img src="assets/images/characters/c1.png">
-        <img src="assets/images/weapons/w1.png">
-        <img src="assets/images/specials/s1.png">
-        <br>
-    </section>
-    <section id="topStats">
-        <br>
-        <i class="fa fa-bolt" aria-hidden="true"></i>
-        <i class="fas fa-dumbbell"></i>
-        <i class="fas fa-skull-crossbones"></i>
-        <i class="fas fa-yin-yang"></i>
-       <br>
-        29    64    31    55
-    </section>
-    <section id="topBalances">
-        <i class="fas fa-coins"> </i>
-        <br>
-        77
-    </section>
-</section>
-
-<section id="user">
-    <section id="topUserProfile">
-        <img src="assets/images/characters/c1.png">
-        <img src="assets/images/weapons/w1.png">
-        <img src="assets/images/specials/s1.png">
-        <br>
-    </section>
-    <section id="topStats">
-        <br>
-        <i class="fa fa-bolt" aria-hidden="true"></i>
-        <i class="fas fa-dumbbell"></i>
-        <i class="fas fa-skull-crossbones"></i>
-        <i class="fas fa-yin-yang"></i>
-       <br>
-        29    64    31    55
-    </section>
-    <section id="topBalances">
-        <i class="fas fa-coins"> </i>
-        <br>
-        77
-    </section>
-</section>
-
-<section id="user">
-    <section id="topUserProfile">
-        <img src="assets/images/characters/c1.png">
-        <img src="assets/images/weapons/w1.png">
-        <img src="assets/images/specials/s1.png">
-        <br>
-    </section>
-    <section id="topStats">
-        <br>
-        <i class="fa fa-bolt" aria-hidden="true"></i>
-        <i class="fas fa-dumbbell"></i>
-        <i class="fas fa-skull-crossbones"></i>
-        <i class="fas fa-yin-yang"></i>
-       <br>
-        29    64    31    55
-    </section>
-    <section id="topBalances">
-        <i class="fas fa-coins"> </i>
-        <br>
-        77
-    </section>
-</section>
 
 
 
-
-
-    <!-- User Nav -->
-    <div id="userNav">
-        <br>
-        <br>
-        <button id="profileButton" onclick="navProfile();">Profile</button>
-        <button id="armouryButton" onclick="navArmoury();">Armoury</button>
-        <button id="storeButton" onclick="navStore();">Store</button>
-    </div>
-
-
+<div id="armoury">
     
-
-    Profile
-    Variables
-    Armoury / Inventory
-    Store, also buy coins w fiat or crypto
-
-    Arena, 1v1, Multiplayer - Goes to fight screen after 
-
-    
-
-
-    <!-- User Profile -->
-    <div id="profile">
-        <div id="balances">
-            <div class="userBalances">
-                <p><i class="fas fa-coins"> </i><span id="balance"> 10</span></p>
-            </div>
-        <div class="userBounty">
-            <p ><i class="fas fa-bullseye"></i> <span id="bounty"> 1</span></p>
-        </div>
-    </div>
-
-
-<div id="playerBattler" hidden>
-    <br>
-    <div class="selects">   
-        <img src="" id="cSelect">
-        <img src="" id="wSelect">
-        <img src="" id="sSelect">
-        <br>
-        <br>
-    </div> 
-
-    <div id="userProfile">
-    <!--V1-->
-        <div class="playerVariables">
-        <i class="fa fa-bolt" aria-hidden="true"></i>: <span id = "v1"> 0 </span>
-    <br>
-        <Button onclick="decrementBalance(), incrementV1();">+</Button>
-         / 
-        <Button onclick="incrementBalance(), decrementV1();">-</Button>
-    
-    </div>
-    
-    <!--V2-->
-    <div class="playerVariables">
-    <i class="fas fa-dumbbell"></i>: <span id = "v2"> 0 </span>
-    <br>
-    <Button onclick="decrementBalance(), incrementV2();">+</Button>
-     / 
-    <Button onclick="incrementBalance(), decrementV2();">-</Button>    
-    </div>
-    
-    <!--V3-->
-    <div class="playerVariables">
-    <i class="fas fa-skull-crossbones"></i>: <span id = "v3"> 0 </span>
-    <br>
-    <Button onclick="decrementBalance(), incrementV3();">+</Button>
-     / 
-    <Button onclick="incrementBalance(), decrementV3();">-</Button>    
-    </div>
-    
-    <!--V4-->
-    <div class="playerVariables">
-    <i class="fas fa-yin-yang"></i>: <span id = "v4"> 0 </span>
-    <br>
-    <Button onclick="decrementBalance(), incrementV4();">+</Button>
-     / 
-    <Button onclick="incrementBalance(), decrementV4();">-</Button>    
-    </div>
-</div>
-</div>
-<br>
-<br>
-</div>
-
-<div id="armoury">Armoury
 <div id="playerSelect">
+    Armoury
     <form name="myForm">
     <label>
         <p>Select Character</p>
@@ -302,8 +222,7 @@
 </div>
 </div>
 
-<!-- Store Section -->
-<div id="store">Store</div>
+
 <br>
 <br>
 
@@ -439,7 +358,7 @@ Score is: <span id = "score"></span>
 Opponent Score: <span id="opponentScore"></span>
 <br>
 <br>
-
+House wallet: <span id = "houseBountyBalance">1000000</span>
 <br>
 <br>
 
