@@ -235,6 +235,7 @@ function hide() {
     if (document.getElementById('r2').checked){
         playerSelect.style.display = "none";
         window.document.getElementById("cSelect").src = window.document.getElementById("c2").src;
+        window.document.getElementById("cS").src = window.document.getElementById("c2").src;
         playerBattler.style.display = "block";
     } else {
         ;
@@ -243,6 +244,7 @@ function hide() {
     if (document.getElementById('r3').checked){
         playerSelect.style.display = "none";
         window.document.getElementById("cSelect").src = window.document.getElementById("c3").src;
+        window.document.getElementById("cS").src = window.document.getElementById("c3").src;
         playerBattler.style.display = "block";
     } else {
         ;
