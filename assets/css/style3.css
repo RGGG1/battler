@@ -93,11 +93,6 @@ img {
 
 
 
-.userBalances, .userBounty {
-    float: left;
-    width: 50%;
-    text-align: center;
-}
 
 .playerVariables {
     float: left;
@@ -160,41 +155,68 @@ img {
 
   /* Profile Card */
 
-  #profileCard {
+  #userProfileCard {
     border: solid gold;
     width: 75%;
     display: inline-block;
   }
 
-  #profileCardCharacter {
+  #userProfileCardCharacter {
     width: 100%;
+    display: inline-block;
   }
 
-  #profileCardCharacter img {
+  #bals {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .gap {
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .userBalances {
+    width: 10%;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .userBounty {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  
+
+
+  #userProfileCardCharacter img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
   }
   
 
-  #profileCardWeapon {
+  #userProfileCardWeapon {
     width: 45%;
     display: inline-block;
 
   }
 
-  #profileCardSpecial {
+  #userProfileCardSpecial {
     width: 45%;
     display: inline-block;
   }
 
-  #profileCardWeapon img, #profileCardSpecial img {
+  #userProfileCardWeapon img, #userProfileCardSpecial img {
     width: 75px;
     height: 75px;
     border-radius: 50%;
   }
 
-  .playerCardVars {
-    width: 20%;
+  .userPlayerCardVars {
+    width: 22%;
     display: inline-block;
   }

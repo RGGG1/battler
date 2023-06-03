@@ -26,50 +26,82 @@
     </section>
 
 
-<section id="profileCard">
-    <section id="profileCardCharacter">
-        <img src="/assets/images/characters/c1.png">
+<!-- User Profile Card -->
+
+<section id="userProfileCard">
+
+    <section id="bals">
+        <br>
+        <section class="userBalances">
+            <i class="fas fa-coins"> </i>
+            <br>
+            <span id="balance"> 10</span>
+        </section>
+
+        <section class="gap"></section>
+
+        <section class="userBounty">
+            <i class="fas fa-bullseye"> </i>
+            <br>
+            <span id="bounty"> 1</span></p>
+        </section>
     </section>
+
+    <section id="userProfileCardCharacter">
+        <img src="" id="cSelect">
+    </section>
+
     
-    <br>
 
-    <section id="profileCardWeapon">
-        <img src="/assets/images/weapons/w1.png">
+    <section id="userProfileCardWeapon">
+        <img src="" id="wSelect">
     </section>
 
-    <section id="profileCardWeapon">
-        <img src="/assets/images/specials/s1.png">
+    <section id="userProfileCardWeapon">
+        <img src="" id="sSelect">
     </section>
     <br>
     <br>
     <br>
 
-    <section id="profileCardVariables">
+    <section id="userProfileCardVariables">
     <!--V1-->
-    <div class="playerCardVars">
+    <div class="userPlayerCardVars">
     <i class="fa fa-bolt"></i> 
         <br>
-        35
+        <span id = "v1"> 23 </span>
+        <br>
+        <Button onclick="decrementBalance(), incrementV1();">+</Button>
+        <Button onclick="incrementBalance(), decrementV1();">-</Button>
     </div>
     <!--V2-->
-    <div class="playerCardVars">
+    <div class="userPlayerCardVars">
         <i class="fas fa-dumbbell"></i>
         <br>
-        24    
+        <span id = "v2"> 20 </span>
+        <br>
+        <Button onclick="decrementBalance(), incrementV2();">+</Button>
+        <Button onclick="incrementBalance(), decrementV2();">-</Button>   
     </div>
 
     <!--V3-->
-    <div class="playerCardVars">
+    <div class="userPlayerCardVars">
         <i class="fas fa-skull-crossbones"></i>
         <br>
-        99   
+        <span id = "v3"> 99 </span>
+        <br>
+        <Button onclick="decrementBalance(), incrementV3();">+</Button>
+        <Button onclick="incrementBalance(), decrementV3();">-</Button>    
     </div>
 
     <!--V4-->
-    <div class="playerCardVars">
+    <div class="userPlayerCardVars">
         <i class="fas fa-yin-yang"></i>
         <br>
-        66    
+        <span id = "v4"> 65 </span>
+        <br>
+        <Button onclick="decrementBalance(), incrementV4();">+</Button>
+        <Button onclick="incrementBalance(), decrementV4();">-</Button>    
     </div>
     </section>
     <br>
@@ -199,7 +231,7 @@
             <section class="vars">
             <i class="fa fa-bolt"></i>
             <br>
-            <span id = "v1"> 20 </span>
+            
             </section>
             <section class="vars">
             <i class="fas fa-dumbbell"></i>
@@ -242,8 +274,8 @@
 
 
 
-<div id="armoury" hidden>
-    
+<div id="armoury">
+    <div id="playerBattler">
 <div id="playerSelect">
     Armoury
     <form name="myForm">
