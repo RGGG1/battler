@@ -162,6 +162,8 @@ img {
 
   #profileCard {
     border: solid gold;
+    width: 75%;
+    display: inline-block;
   }
 
   #profileCardCharacter {
@@ -169,8 +171,8 @@ img {
   }
 
   #profileCardCharacter img {
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
   }
   
