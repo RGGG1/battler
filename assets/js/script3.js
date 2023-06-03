@@ -121,6 +121,9 @@ function opponentBattleScore() {
 }
 
 
+// Armoury and Store Show / Hide
+
+
 
 /* Load characters, weapons, specials + randomisation and no dupes */
 
@@ -373,6 +376,7 @@ function expandProfile() {
 
 /* Nav show hide sections */
 
+
 function navProfile() {
     var profile = document.getElementById('profile');
     var armoury = document.getElementById('armoury');
@@ -389,16 +393,12 @@ function navProfile() {
 }
 
 function navArmoury() {
-    var profile = document.getElementById('profile');
     var armoury = document.getElementById('armoury');
-    var store = document.getElementById('store');
     if (window.getComputedStyle(armoury).display === "block") {
         ;
-        
+         
     } else {
-        profile.style.display = "none";
         armoury.style.display = "block";
-        store.style.display = "none";
     }
 }
 

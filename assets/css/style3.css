@@ -60,20 +60,12 @@ body {
 
 /* Top Section */
 
-#topUserProfile, #topBalances {
+#topUserProfile, #topStats, #topBalances {
     width: 33%;
     height: 50px;
     display: inline-block;
     text-align: center;
 }
-
-#topStats {
-    width: 33%;
-    height: 50px;
-    display: inline-block;
-    text-align: center;
-}
-
 
 .vars {
     width: 20%;
@@ -165,3 +157,42 @@ img {
     display: none;
   }
   
+
+  /* Profile Card */
+
+  #profileCard {
+    border: solid gold;
+  }
+
+  #profileCardCharacter {
+    width: 100%;
+  }
+
+  #profileCardCharacter img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+  }
+  
+
+  #profileCardWeapon {
+    width: 45%;
+    display: inline-block;
+
+  }
+
+  #profileCardSpecial {
+    width: 45%;
+    display: inline-block;
+  }
+
+  #profileCardWeapon img, #profileCardSpecial img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
+
+  .playerCardVars {
+    width: 20%;
+    display: inline-block;
+  }
