@@ -331,8 +331,8 @@ function incrementV1() {
     let oldV1 = parseInt(document.getElementById("v1").innerText);
     document.getElementById("v1").innerText = ++oldV1;
 
-    let oldVv1 = parseInt(document.getElementsByClassName("ok1")[0].innerText);
-    document.getElementsByClassName("ok1")[0].innerText = ++oldVv1;
+    let oldVv1 = parseInt(document.getElementsByClassName("Vv1")[0].innerText);
+    document.getElementsByClassName("Vv1")[0].innerText = ++oldVv1;
 
 }
 
@@ -341,14 +341,15 @@ function decrementV1() {
     document.getElementById("v1").innerText = --oldV1;
 
 
-    let oldVv1 = parseInt(document.getElementsByClassName("ok1")[0].innerText);
-    document.getElementsByClassName("ok1")[0].innerText = --oldVv1;
+    let oldVv1 = parseInt(document.getElementsByClassName("Vv1")[0].innerText);
+    document.getElementsByClassName("Vv1")[0].innerText = --oldVv1;
 }
 
 // V2
 function incrementV2() {
     let oldV2 = parseInt(document.getElementById("v2").innerText);
     document.getElementById("v2").innerText = ++oldV2;
+    
 }
 
 function decrementV2() {
