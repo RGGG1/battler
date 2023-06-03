@@ -254,18 +254,21 @@ function hide() {
 
     if (document.getElementById('r4').checked){
         window.document.getElementById("wSelect").src = window.document.getElementById("w1").src;
+        window.document.getElementById("wS").src = window.document.getElementById("w3").src;
     } else {
         ;
     }
 
     if (document.getElementById('r5').checked){
         window.document.getElementById("wSelect").src = window.document.getElementById("w2").src;
+        window.document.getElementById("wS").src = window.document.getElementById("w3").src;
     } else {
         ;
     }
 
     if (document.getElementById('r6').checked){
         window.document.getElementById("wSelect").src = window.document.getElementById("w3").src;
+        window.document.getElementById("wS").src = window.document.getElementById("w3").src;
     } else {
         ;
     }
@@ -273,18 +276,21 @@ function hide() {
     // special hide
     if (document.getElementById('r7').checked){
         window.document.getElementById("sSelect").src = window.document.getElementById("s1").src;
+        window.document.getElementById("sS").src = window.document.getElementById("s1").src;
     } else {
         ;
     }
 
     if (document.getElementById('r8').checked){
         window.document.getElementById("sSelect").src = window.document.getElementById("s2").src;
+        window.document.getElementById("sS").src = window.document.getElementById("s2").src;
     } else {
         ;
     }
 
     if (document.getElementById('r9').checked){
         window.document.getElementById("sSelect").src = window.document.getElementById("s3").src;
+        window.document.getElementById("sS").src = window.document.getElementById("s3").src;
     } else {
         ;
     }
