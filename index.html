@@ -1,214 +1,471 @@
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- font awesome and google fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+        <!-- font awesome and google fonts -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+                
+        <!-- Description, Kyewords, Title -->
+        <title>Battler</title>
+            <meta name="description" content="Fast Action Battle Game">
+            <meta name="keywords" content="Mobile game, cool new apps, fun mobile games, auto battler">
+    </head>
+            
+    <body>
     
-    <!-- Description, Kyewords, Title -->
-    <title>Battler</title>
-    <meta name="description" content="Fast Action Battle Game">
-    <meta name="keywords" content="Mobile game, cool new apps, fun mobile games, auto battler">
-
-</head>
-<body>
-<!--Header-->
-<section class="wrapper">
-    <div class="top">Scars of Battle</div>
-    <div class="bottom" aria-hidden="true">Scars of Battle</div>
-</section>
-
-<section class="header">
-    <div class="header">
-        <h2>"To the brave go the spoils of War Today"</h2>
-        <h3>Kill your enemy twice and progress to the next round.</h3><!--Extend this to a screen of lore, or multiple, cool intro, and a skip button-->
-    </div>
-</section>
-
-<section class="gamearea">
-
-   <!-- Convert each of your button elements to input elements with type=radio and style them with label elements too and group them using name. 
-    That way each of the 3 lists can only have one thing selected, which is what you want, but you can have one selected from each list all at the same time. -->
-
-    <section class="character">
-        <div>
-            <h2>Character</h2><br>
-            <input type=radio class="character" id="character4"></input>
-            <input type=radio class="character" id="character1"></input>
-            <input type=radio class="character" id="character5"></input>
+        <!-- Logo -->
+        <section class="wrapper">
+            <div class="top">Battle Godz</div>
+            <div class="bottom" aria-hidden="true">Battle Godz</div>
+        </section>
+    
+        <div id="armoury">
+            <div id="playerBattler">
+        <div id="playerSelect">
+            Armoury
+            <form name="myForm">
+            <label>
+                <p>Select Character</p>
+                <input type="radio" name="characters"  value="50" id="r1" >        
+                <img src="" alt="Option 1" id="c1" >
+            </label>
+            <label>
+                <input type="radio" name="characters"  value="60" id="r2">
+                <img src="" alt="Option 1" id="c2" >
+            </label>
+            <label>
+                <input type="radio" name="characters"  value="70" id="r3">
+                <img src="" alt="Option 1" id="c3">
+            </label>
+            <label>
+                <p>Select Weapon</p>
+                <input type="radio" name="weapons"  value="50" id="r4">
+                <img src="assets/images/weapons/shield.png" alt="Option 1" id="w1">
+            </label>
+            <label>
+                <input type="radio" name="weapons"  value="60" id="r5">
+                <img src="assets/images/weapons/sword.png" alt="Option 1" id="w2">
+            </label>
+            <label>
+                <input type="radio" name="weapons"  value="70" id="r6">
+                <img src="assets/images/weapons/ballchain.png" alt="Option 1" id="w3">
+            </label>
+            <label>
+                <p>Select Special</p>
+                <input type="radio" name="specials"  value="50" id="r7">
+                <img src="assets/images/specials/lightening.png" alt="Option 1" id="s1">
+            </label>
+            <label>
+                <input type="radio" name="specials"  value="60" id="r8">
+                <img src="assets/images/specials/fireball.png" alt="Option 1" id="s2">
+            </label>
+            <label>
+                <input type="radio" name="specials"  value="70" id="r9">
+                <img src="assets/images/specials/ninja.png" alt="Option 1" id="s3">
+            </label>
+            <br>
+            <!-- Hide Selection section later -->
+            <div id="selectionScores" hidden>
+            Selection: <span id="character"></span> and <span id="weapon"></span> and <span id="special"></span>
         </div>
+        </form>
+        
+        <div>
+            <br>
+            <button onClick="chooseCharacter(), chooseWeapon(), chooseSpecial(), decrementBalance()"><i class="fas fa-sync-alt"></i>: $1</button>
+            <br>
+        </div>
+        <br>
+        <div>
+        <Button onClick="hide(); characterScore(); createOpponent()" id="confirmSelection">Confirm Selection</button>
+        </div>
+        </div>
+        </div>
+        
+        
+        <br>
+        <br>
+        
+    
+    <!-- User Profile Card -->
+    
+    <section id="userProfileCard">
+        <section id="bals">
+            <br>
+            <section class="userBalances">
+                <i class="fas fa-coins"> </i>
+                <br>
+                <span id="balance"> 10</span>
+            </section>
+    
+            <section class="gap">ROSS</section> <!-- Make this a user input field to write their own Character name -->
+    
+            <section class="userBounty">
+                <i class="fas fa-bullseye"> </i>
+                <br>
+                <span id="bounty"> 1</span></p>
+            </section>
+        </section>
+    
+    
+    
+        <section id="userProfileCardCharacter">
+            <img src="" id="cSelect">
+        </section>
+    
+        
+    
+        <section id="userProfileCardWeapon">
+            <img src="" id="wSelect">
+        </section>
+    
+        <section id="userProfileCardWeapon">
+            <img src="" id="sSelect">
+        </section>
+        <br>
+        <br>
+        <br>
+    
+        <section id="userProfileCardVariables">
+        <!--V1-->
+        <div class="userPlayerCardVars">
+        <i class="fa fa-bolt"></i> 
+            <br>
+            <span id = "v1"> 23 </span>
+            <br>
+            <Button onclick="decrementBalance(), incrementV1();">+</Button>
+            <Button onclick="incrementBalance(), decrementV1();">-</Button>
+        </div>
+        <!--V2-->
+        <div class="userPlayerCardVars">
+            <i class="fas fa-dumbbell"></i>
+            <br>
+            <span id = "v2"> 20 </span>
+            <br>
+            <Button onclick="decrementBalance(), incrementV2();">+</Button>
+            <Button onclick="incrementBalance(), decrementV2();">-</Button>   
+        </div>
+    
+        <!--V3-->
+        <div class="userPlayerCardVars">
+            <i class="fas fa-skull-crossbones"></i>
+            <br>
+            <span id = "v3"> 99 </span>
+            <br>
+            <Button onclick="decrementBalance(), incrementV3();">+</Button>
+            <Button onclick="incrementBalance(), decrementV3();">-</Button>    
+        </div>
+    
+        <!--V4-->
+        <div class="userPlayerCardVars">
+            <i class="fas fa-yin-yang"></i>
+            <br>
+            <span id = "v4"> 65 </span>
+            <br>
+            <Button onclick="decrementBalance(), incrementV4();">+</Button>
+            <Button onclick="incrementBalance(), decrementV4();">-</Button>    
+        </div>
+        </section>
+    
+        <br>
+        <button onclick="miniP()">-</button>
+        <br>
+        <br>
     </section>
-
-<!--Choose Character-->
-<section class="character">
-    <div>
-        <h2>Character</h2><br>
-        <button class="character" id="character4"></button>
-        <button class="character" id="character1"></button>
-        <button class="character" id="character5"></button>
-    </div>
-</section>
-
-<section class="character">
-    <div>
-        <h2>Weapon</h2><br>
-        <button class="weapon" id="sword"></button>
-        <button class="weapon" id="shield"></button>
-        <button class="weapon" id="ballchain"></button>
-    </div>
-</section>
-
-<section class="Specials">
-    <div>
-        <h2>Specials</h2><br>
-        <button class="special" id="fireball"></button>
-        <button class="special" id="ninja"></button>
-        <button class="special" id="lightening"></button>
-    </div>
-</section>
-<br>
-<section>
-    <button>Ready for Battle</button>
-</section>
-
-</section>
-
-<!--Status-->
-<section></section>
-<div>
-    <h2>Status</h2>
-    <button class="character" id="character1"></button><br>
-    Character Name<br>
-    Battles Won x/y<br>
-    Fights won x/y<br>
-    Level<br>
-    Attack - x/~<br>
-    Defence - x/~<br>
-    Specials<br>
-
-<!--Always show level, score etc in icons on every screen along top nav-->
-    <button>choose character </button> <!--or use current selection-->
-</div>
-
-
-
-<div>
-    <h2>Character Stats</h2><br>
-    <section></section>
-    Score: 75
-    <!--show stats / details of each weapon-->
-    <br>
-    <button>Specials >>></button>
-</div>
-
-<div>
-    <h2>Choose your weapons</h2><br>
-    <section></section>
-    <!--show stats / details of each weapon-->
-    <br>
-    <button>Specials >>></button>
-</div>
-
-<div>
-    <h2>Choose your Specials</h2><br><!--Pay for them or use your earned tokens etc-->
-    <section></section>
-    <!--show stats / details of each special, or keep them as complete surprise-->
-    <br>
-    <button>Battle >>></button>
-</div>
     
-
-<!--Choose character-->
-<section></section>
-<div>
-    Choose Character
-    Current Level - starts at lvl 1
-    9 x img across header, scroll sideways through
-    When you click one it expand and shows details
-    Button - Select character and go to battle
-</div>
-
-
-
-<!--Battle-->
-<div>
-    Battles - best of three
-    <div id="windiv"w>
-        Battle 1
-        <button class="character-third" id="character4"></button>
-    <button class="character-second" id="character1"></button>
     <br>
-    <Button onClick="fight()">Fight</Button>  
-    Result is: <span id = "result"></span>
     
-    <br><br>
-     
-        Animation
-        <div>
-            Result 1
-            Upgrade before next round or just continue
-        </div>
-    </div>
-
+        
+        
+    <!-- Mini Profile -->
+    <section id="user" >
+        <br>
+        <br>
+        Ross
+        <br>
+        <br>
+            <section id="miniProfile" >
+                <section id="topUserProfile">
+                    <img src="" id="cS">
+                    <img src="" id="wS">
+                    <img src="" id="sS">
+                </section>
+    
+                <section id="topStats">
+                    <section class="vars">
+                    <i class="fa fa-bolt"></i>
+                    <br>
+                    <span class = "Vv1"> 35 </span>
+                    </section>
+                    <section class="vars">
+                    <i class="fas fa-dumbbell"></i>
+                    <br>
+                    <span class = "Vv2"> 24 </span>
+                    </section>
+                    <section class="vars">
+                    <i class="fas fa-skull-crossbones"></i>
+                    <br>
+                    <span class = "Vv3"> 99 </span>
+                    </section>
+                    <section class="vars">
+                    <i class="fas fa-yin-yang"></i>
+                    <br>
+                    <span class = "Vv4"> 11 </span>
+                    </section>
+                                
+                    <section class="vars">
+                        <i class="fas fa-coins"> </i>
+                        <br>
+                        <span class="coinBalance"> 10</span>
+                    </section>
+    
+                    <section class="vars">
+                        <i class="fas fa-bullseye"> </i>
+                        <br>
+                        <span class="bountyBalance"> 1</span></p>
+                    </section>
+                    </section>
+                </section>
+                <br>
+                <button onclick="bigP()">+</button>
+                <br>
+                <br>
+            </section>
+            
+    </section>
+    
+    
+    <section id="opponentSection">
+        <br>
+        <br>
+        Select your Opponent
+        <br>
+        <br>
+        <details>
+        <summary>
+            <section id="miniProfile" >
+                <section id="topUserProfile">
+                    <img src="/assets/images/characters/c1.png" id="">
+                    <img src="/assets/images/weapons/w1.png" id="">
+                    <img src="/assets/images/specials/s1.png" id="">
+                </section>
+    
+                <section id="topStats">
+                    <section class="vars">
+                    <i class="fa fa-bolt"></i>
+                    <br>
+                    <span class = ""> 5 </span>
+                    </section>
+                    <section class="vars">
+                    <i class="fas fa-dumbbell"></i>
+                    <br>
+                    <span class = ""> 9 </span>
+                    </section>
+                    <section class="vars">
+                    <i class="fas fa-skull-crossbones"></i>
+                    <br>
+                    <span class = ""> 14 </span>
+                    </section>
+                    <section class="vars">
+                    <i class="fas fa-yin-yang"></i>
+                    <br>
+                    <span class = ""> 4 </span>
+                    </section>
+                                
+                    <section class="vars">
+                        <i class="fas fa-coins"> </i>
+                        <br>
+                        <span class=""> 7</span>
+                    </section>
+    
+                    <section class="vars">
+                        <i class="fas fa-bullseye"> </i>
+                        <br>
+                        <span class=""> 3</span></p>
+                    </section>
+                </section>
+            </section>
+                <br>
+                <br>
+    
+        </summary>
+        <Button onClick="fight1()" >Fight</Button>
+    <br>
+        <br>
+    </details>
+    </section>
+    <br>
+    <br>
     <div>
-        Battle 2
-        Animation
-        <div>
-            Result 2
-            Upgrade before next round or just continue
-        </div>
+        <p>Battle Score</p>
+        <span id="playerBattleScore">0</span> : <span id="opponentBattleScore">0</span>
     </div>
-
+    
     <div>
-        Battle 3
-        Animation
-        <div>
-            Result 3
-            Continue to next level or back to start - either way you go back to the status and character screens
-        </div>
+        <!--Fight #1 result-->
+    <Button onClick="fight1()" >Fight1</Button>
+    Fight result: <span id="fightResult1"></span>
+    <br>
     </div>
-
-</div>
-
-<!--Powers ups-->
-<div>
-    Power ups
-    Attack weapon
-    Defence weapon
-    Specials
-</div>
-
-<!--Animation-->
-<div>
-    Fight Animation
-</div>
-
-<!--Results-->
-<div>
-    Results
-</div>
-
-<div>
-    Choose character - keep current
-</div>
-
-
-<div>
-    Leaderboard
-</div>
-
-
-
-
-
-<script src="assets/js/script.js"></script>
-    <!--font awesome script-->
-    <script src="https://kit.fontawesome.com/1f271c2fd4.js" crossorigin="anonymous"></script>
-</body>
-</html>
+    
+    
+    
+    
+    
+    <!-- Battle Arena -->
+    <div id="battleArena">
+        <p>Battle Arena</p>
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c6.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c7.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c9.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c10.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c1.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c2.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c4.png" alt="Option 1" id="a1">
+        <img src="assets/images/characters/c5.png" alt="Option 1" id="a1">
+    </div>
+    
+    <section class="fightAnimation">
+        <img src="assets/images/gifs/fight1.gif" alt="Option 1">
+    </section>
+    
+    
+    
+    <br>
+    <br>
+    <!-- Hide Score later -->
+    <Button onClick="characterScore()">Score</Button>
+    Score is: <span id = "score"></span>
+    
+    <br>
+    <br>
+    <!--Create Oppnent score-->
+    <Button onClick="createOpponent()">Opponent</Button>
+    Opponent Score: <span id="opponentScore"></span>
+    <br>
+    <br>
+    House wallet: <span id = "houseBountyBalance">1000000</span>
+    <br>
+    <br>
+    
+    
+    </body>
+    </html>
+            
+            
+            
+            
+         
+    
+    <script src="assets/js/script.js"></script>
+        <!--font awesome script-->
+        <script src="https://kit.fontawesome.com/1f271c2fd4.js" crossorigin="anonymous"></script>
+    </body>
+    </html>
+    
+    
+    
+    
+    <!-- Saving this for later - shows the player selections
+        
+    <div id="playerBattler" hidden>
+        <br>
+            <div class="selects">   
+                <img src="" id="cSelect">
+                <img src="" id="wSelect">
+                <img src="" id="sSelect">
+                <br>
+                <br>
+            </div> 
+    
+        -->

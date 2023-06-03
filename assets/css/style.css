@@ -1,18 +1,18 @@
+/* Header */
 * {
     box-sizing: border-box;
   }
   :root {
     --background-color: black;
-    --text-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 100%, 50%);
   }
   body {
     margin: 0;
     background: black;
-    color: gray;
     text-align: center;
   }
 
-  h2 {
+h2 {
     color: gold
   }
 
@@ -22,7 +22,7 @@
     background-color: var(--background-color);
     height: 150px
     font-family: "Oswald", sans-serif;
-    font-size: 44px;
+    font-size: 32px;
     font-weight: 700;
     text-transform: uppercase;
     color: var(--text-color);
@@ -46,91 +46,202 @@
     transform: translateX(-0.02em);
   }
 
-#gamearea {
-    width: 500px;
+
+  /* Body */
+
+
+body {
+    color: white;
+    background-color: black;   
+    text-align: center;
+    width: 350px;
+    margin: auto;
 }
 
+/* Top Section */
 
+#miniProfile {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
 
-/* Character */
+#topUserProfile {
+    width: 35%;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+}
 
-.character, .weapon, .special {
-    width: 100px;
-    height: 100px;
+#topStats {
+    width: 60%;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+#topBalances {
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+.vars {
+    width: 15%;
+    height: 50px;
+    display: inline-block;
+}
+
+#miniProfile img{
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    padding: 5px 5px 5px 5px;
-    outline: none;
-    border: none;
-    background-size: cover;
+}
+
+
+
+/* selects */
+
+img {
+    height: 100px;
+    width: 100px;    
+}
+
+
+/* User balances / bounty / Player Variables */
+
+
+
+
+.playerVariables {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+
+
+/*Arena images*/
+#a1 {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* image as radio button and hide the actual radio button */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  
+  /* IMAGE STYLES */
+  [type=radio] + img {
+    cursor: pointer;
+    outline: solid black;
     background-color: black;
-    display: inline;
-}
+    margin: 5px;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + img {
+    outline: 5px solid red;   
+  }
+
+   /* Hover STYLES */
+   [type=radio]:hover + img {
+    outline: 5px solid gold;   
+  }
 
 
-#character1 {
-    background-image: url("/assets/images/1.png");
-}
+  /* Collapsible expansions */
+  details {
+    width: 100%;
+    user-select: none;
+  }
+  
+ summary {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
 
-#character2 {
-    background-image: url("/assets/images/2.png");
-}
+  /* Profile Card - Mini and Large */
 
-#character3 {
-    background-image: url("/assets/images/5.png");
-}
 
-#character4 {
-    background-image: url("/assets/images/6.png");
-}
+  #user {
+    border: solid gold;
+    width: 100%;
+    display: none;
+  }
 
-#character5 {
-    background-image: url("/assets/images/9.png");
-}
+  #userProfileCard {
+    border: solid gold;
+    width: 100%;
+    display: inline-block;
+  }
 
-#sword {
-    background-image: url("/assets/images/sword.png");
-}
+  #userProfileCardCharacter {
+    width: 100%;
+    display: inline-block;
+  }
 
-#shield {
-    background-image: url("/assets/images/shield.png");
-}
+  #bals {
+    width: 100%;
+    display: inline-block;
+  }
 
-#ballchain {
-    background-image: url("/assets/images/ballchain.png");
-}
+  .gap {
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+  }
 
-#fireball {
-    background-image: url("/assets/images/fireball.png");
-}
+  .userBalances {
+    width: 10%;
+    display: inline-block;
+    text-align: left;
+  }
 
-#ninja {
-    background-image: url("/assets/images/ninja.png");
-}
+  .userBounty {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+  }
 
-#lightening {
-    background-image: url("/assets/images/lightening.png");
-}
 
-button {
-    margin: 25px 25px 25px 25px;
-    outline: solid;
-    outline-color: gray;
-    outline: solid;
-    outline-color: black;
-}
+  #userProfileCardCharacter img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
 
-button:hover {
-    outline: solid;
-    outline-color: gold;
-    border: 10px;
-    border-color: gold;
-    width: 125px;
-    height: 125px;
-}
+  #userProfileCardWeapon {
+    width: 45%;
+    display: inline-block;
 
-button:focus {
-    outline: solid;
-    outline-color: gold;
-    width: 125px;
-    height: 125px;
-}
+  }
+
+  #userProfileCardSpecial {
+    width: 45%;
+    display: inline-block;
+  }
+
+  #userProfileCardWeapon img, #userProfileCardSpecial img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
+
+  .userPlayerCardVars {
+    width: 22%;
+    display: inline-block;
+  }
