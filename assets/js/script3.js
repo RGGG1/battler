@@ -330,11 +330,19 @@ function decrementBounty() {
 function incrementV1() {
     let oldV1 = parseInt(document.getElementById("v1").innerText);
     document.getElementById("v1").innerText = ++oldV1;
+
+    let oldVv1 = parseInt(document.getElementsByClassName("ok1")[0].innerText);
+    document.getElementsByClassName("ok1")[0].innerText = ++oldVv1;
+
 }
 
 function decrementV1() {
     let oldV1 = parseInt(document.getElementById("v1").innerText);
     document.getElementById("v1").innerText = --oldV1;
+
+
+    let oldVv1 = parseInt(document.getElementsByClassName("ok1")[0].innerText);
+    document.getElementsByClassName("ok1")[0].innerText = --oldVv1;
 }
 
 // V2
