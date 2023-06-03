@@ -226,6 +226,7 @@ function hide() {
     if (document.getElementById('r1').checked){
         playerSelect.style.display = "none";
         window.document.getElementById("cSelect").src = window.document.getElementById("c1").src;
+        window.document.getElementById("cS").src = window.document.getElementById("c1").src;
         playerBattler.style.display = "block";       
     } else {
         ;
