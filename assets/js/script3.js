@@ -301,11 +301,13 @@ function hide() {
   function incrementBalance() {
     let oldScore = parseInt(document.getElementById("balance").innerText);
     document.getElementById("balance").innerText = ++oldScore;
+    document.getElementsByClassName("coinBalance")[0].innerText = parseInt(document.getElementById("balance").innerText);
 }
 
 function decrementBalance() {
     let oldScore = parseInt(document.getElementById("balance").innerText);
     document.getElementById("balance").innerText = --oldScore;
+    document.getElementsByClassName("coinBalance")[0].innerText = parseInt(document.getElementById("balance").innerText);
 }
 
 /* Bounty increment and decrement */
@@ -313,6 +315,7 @@ function decrementBalance() {
 function incrementBounty() {
     let oldScore = parseInt(document.getElementById("bounty").innerText);
     document.getElementById("bounty").innerText = ++oldScore;
+    document.getElementsByClassName("bountyBalance")[0].innerText = parseInt(document.getElementById("bounty").innerText);
 
     let oldHouseBountyBalance = parseInt(document.getElementById("houseBountyBalance").innerText);
     document.getElementById("houseBountyBalance").innerText = --oldHouseBountyBalance;
@@ -321,115 +324,74 @@ function incrementBounty() {
 function decrementBounty() {
     let oldScore = parseInt(document.getElementById("bounty").innerText);
     document.getElementById("bounty").innerText = oldScore - oldScore +1;
+    document.getElementsByClassName("bountyBalance")[0].innerText = parseInt(document.getElementById("bounty").innerText);
 }
 
 
-/* increment and decrement profile variables - user controlled */
+/* onload match variables in various objects */
 
+window.onload = varMatch()
+function varMatch() {
+    document.getElementsByClassName("Vv1")[0].innerText = parseInt(document.getElementById("v1").innerText);
+    document.getElementsByClassName("Vv2")[0].innerText = parseInt(document.getElementById("v2").innerText);
+    document.getElementsByClassName("Vv3")[0].innerText = parseInt(document.getElementById("v3").innerText);
+    document.getElementsByClassName("Vv4")[0].innerText = parseInt(document.getElementById("v4").innerText);
+    document.getElementsByClassName("coinBalance")[0].innerText = parseInt(document.getElementById("balance").innerText);
+    document.getElementsByClassName("bountyBalance")[0].innerText = parseInt(document.getElementById("bounty").innerText);
+}
+
+/* increment and decrement profile variables - user controlled - also updates same stats in other areas*/
 // V1
 function incrementV1() {
     let oldV1 = parseInt(document.getElementById("v1").innerText);
     document.getElementById("v1").innerText = ++oldV1;
 
-    let oldVv1 = parseInt(document.getElementsByClassName("Vv1")[0].innerText);
-    document.getElementsByClassName("Vv1")[0].innerText = ++oldVv1;
+    document.getElementsByClassName("Vv1")[0].innerText = parseInt(document.getElementById("v1").innerText);
 
 }
 
 function decrementV1() {
     let oldV1 = parseInt(document.getElementById("v1").innerText);
     document.getElementById("v1").innerText = --oldV1;
-
-
-    let oldVv1 = parseInt(document.getElementsByClassName("Vv1")[0].innerText);
-    document.getElementsByClassName("Vv1")[0].innerText = --oldVv1;
+    document.getElementsByClassName("Vv1")[0].innerText = parseInt(document.getElementById("v1").innerText);
 }
 
 // V2
 function incrementV2() {
     let oldV2 = parseInt(document.getElementById("v2").innerText);
     document.getElementById("v2").innerText = ++oldV2;
-    
+    document.getElementsByClassName("Vv2")[0].innerText = parseInt(document.getElementById("v2").innerText);    
 }
 
 function decrementV2() {
     let oldV2 = parseInt(document.getElementById("v2").innerText);
     document.getElementById("v2").innerText = --oldV2;
+    document.getElementsByClassName("Vv2")[0].innerText = parseInt(document.getElementById("v2").innerText);
 }
 
 // V3
 function incrementV3() {
     let oldV3 = parseInt(document.getElementById("v3").innerText);
     document.getElementById("v3").innerText = ++oldV3;
+    document.getElementsByClassName("Vv3")[0].innerText = parseInt(document.getElementById("v3").innerText);
 }
 
 function decrementV3() {
     let oldV3 = parseInt(document.getElementById("v3").innerText);
     document.getElementById("v3").innerText = --oldV3;
+    document.getElementsByClassName("Vv3")[0].innerText = parseInt(document.getElementById("v3").innerText);
 }
 
 // V4
 function incrementV4() {
     let oldV4 = parseInt(document.getElementById("v4").innerText);
     document.getElementById("v4").innerText = ++oldV4;
+    document.getElementsByClassName("Vv4")[0].innerText = parseInt(document.getElementById("v4").innerText);
 }
 
 function decrementV4() {
     let oldV4 = parseInt(document.getElementById("v4").innerText);
     document.getElementById("v4").innerText = --oldV4;
+    document.getElementsByClassName("Vv4")[0].innerText = parseInt(document.getElementById("v4").innerText);
 }
 
-
-
-/* Show and Hide Profile */
-
-function expandProfile() {
-    var profile = document.getElementById('userProfile');
-    if (window.getComputedStyle(profile).display === "none") {
-        profile.style.display = "block";     
-    } else {
-        profile.style.display = "none";
-    }
-}
-
-/* Nav show hide sections */
-
-
-function navProfile() {
-    var profile = document.getElementById('profile');
-    var armoury = document.getElementById('armoury');
-    var store = document.getElementById('store');
-    if (window.getComputedStyle(profile).display === "block") {
-        ;
-        
-    } else {
-        profile.style.display = "block";
-        armoury.style.display = "none";
-        store.style.display = "none";
-    }
-
-}
-
-function navArmoury() {
-    var armoury = document.getElementById('armoury');
-    if (window.getComputedStyle(armoury).display === "block") {
-        ;
-         
-    } else {
-        armoury.style.display = "block";
-    }
-}
-
-function navStore() {
-    var profile = document.getElementById('profile');
-    var armoury = document.getElementById('armoury');
-    var store = document.getElementById('store');
-    if (window.getComputedStyle(store).display === "block") {
-        ;
-        
-    } else {
-        profile.style.display = "none";
-        armoury.style.display = "none";
-        store.style.display = "block";
-    }
-}

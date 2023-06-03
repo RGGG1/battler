@@ -60,20 +60,40 @@ body {
 
 /* Top Section */
 
-#topUserProfile, #topStats, #topBalances {
-    width: 33%;
+#miniProfile {
+    width: 100%;
     height: 50px;
-    display: inline-block;
     text-align: center;
 }
 
-.vars {
+#topUserProfile {
+    width: 35%;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+#topStats {
+    width: 60%;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+#topBalances {
     width: 20%;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+.vars {
+    width: 15%;
     height: 50px;
     display: inline-block;
 }
 
-#topUserProfile img{
+#miniProfile img{
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -153,7 +173,7 @@ img {
   }
   
 
-  /* Profile Card */
+  /* Profile Card - Large */
 
   #userProfileCard {
     border: solid gold;
