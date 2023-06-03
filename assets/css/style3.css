@@ -173,11 +173,18 @@ img {
   }
   
 
-  /* Profile Card - Large */
+  /* Profile Card - Mini and Large */
+
+
+  #user {
+    border: solid gold;
+    width: 100%;
+    display: inline-block;
+  }
 
   #userProfileCard {
     border: solid gold;
-    width: 75%;
+    width: 100%;
     display: inline-block;
   }
 

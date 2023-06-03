@@ -395,3 +395,27 @@ function decrementV4() {
     document.getElementsByClassName("Vv4")[0].innerText = parseInt(document.getElementById("v4").innerText);
 }
 
+
+function miniP() {
+    var x = document.getElementById("userProfileCard");
+    var y = document.getElementById("user");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      
+    } else {
+      x.style.display = "none";
+      y.style.display = "block";
+    }
+  } 
+
+  function bigP() {
+    var x = document.getElementById("userProfileCard");
+    var y = document.getElementById("user");
+    if (y.style.display === "none") {
+      y.style.display = "block";
+     
+    } else {
+      y.style.display = "none";
+      x.style.display = "block";
+    }
+  } 
