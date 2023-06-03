@@ -179,7 +179,7 @@ img {
   #user {
     border: solid gold;
     width: 100%;
-    display: inline-block;
+    display: none;
   }
 
   #userProfileCard {
