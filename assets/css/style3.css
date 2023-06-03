@@ -60,15 +60,30 @@ body {
 
 /* Top Section */
 
-#topUserProfile, #topStats, #topBalances {
+#topUserProfile, #topBalances {
     width: 33%;
-    height: 75px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+}
+
+#topStats {
+    width: 33%;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.vars {
+    width: 20%;
+    height: 50px;
     display: inline-block;
 }
 
 #topUserProfile img{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
 }
 
