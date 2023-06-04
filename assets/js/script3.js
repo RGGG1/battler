@@ -307,7 +307,17 @@ function hide() {
     i.style.color = "green";
     setTimeout(function () { i.style.color = "white" }, 250);
 
-    
+    var x = document.getElementsByClassName("coinBalance")[0];
+    x.style.color = "green";
+    setTimeout(function () { x.style.color = "white" }, 250);    
+
+    var y = document.getElementsByClassName("fas fa-coins")[0];
+    y.style.color = "green";
+    setTimeout(function () { y.style.color = "white" }, 250);
+
+    var z = document.getElementsByClassName("fas fa-coins")[1];
+    z.style.color = "green";
+    setTimeout(function () { z.style.color = "white" }, 250);
 }
 
 function decrementBalance() {
@@ -318,6 +328,18 @@ function decrementBalance() {
     var i = document.getElementById("balance");
     i.style.color = "red";
     setTimeout(function () { i.style.color = "white" }, 250);
+
+    var x = document.getElementsByClassName("coinBalance")[0];
+    x.style.color = "red";
+    setTimeout(function () { x.style.color = "white" }, 250);
+
+    var y = document.getElementsByClassName("fas fa-coins")[0];
+    y.style.color = "red";
+    setTimeout(function () { y.style.color = "white" }, 250);
+
+    var z = document.getElementsByClassName("fas fa-coins")[1];
+    z.style.color = "red";
+    setTimeout(function () { z.style.color = "white" }, 250);
 }
 
 /* Bounty increment and decrement */
@@ -333,6 +355,18 @@ function incrementBounty() {
     var i = document.getElementById("bounty");
     i.style.color = "green";
     setTimeout(function () { i.style.color = "white" }, 250);
+
+    var x = document.getElementsByClassName("bountyBalance")[0];
+    x.style.color = "green";
+    setTimeout(function () { x.style.color = "white" }, 250);
+
+    var y = document.getElementsByClassName("fas fa-bullseye")[0];
+    y.style.color = "green";
+    setTimeout(function () { y.style.color = "white" }, 250);
+
+    var z = document.getElementsByClassName("fas fa-bullseye")[1];
+    z.style.color = "green";
+    setTimeout(function () { z.style.color = "white" }, 250);
 }
 
 function decrementBounty() {
@@ -343,6 +377,18 @@ function decrementBounty() {
     var i = document.getElementById("bounty");
     i.style.color = "red";
     setTimeout(function () { i.style.color = "white" }, 250);
+
+    var x = document.getElementsByClassName("bountyBalance")[0];
+    x.style.color = "red";
+    setTimeout(function () { x.style.color = "white" }, 250);
+
+    var y = document.getElementsByClassName("fas fa-bullseye")[0];
+    y.style.color = "red";
+    setTimeout(function () { y.style.color = "white" }, 250);
+
+    var z = document.getElementsByClassName("fas fa-bullseye")[1];
+    z.style.color = "red";
+    setTimeout(function () { z.style.color = "white" }, 250);    
 }
 
 
