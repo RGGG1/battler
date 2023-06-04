@@ -302,12 +302,22 @@ function hide() {
     let oldScore = parseInt(document.getElementById("balance").innerText);
     document.getElementById("balance").innerText = ++oldScore;
     document.getElementsByClassName("coinBalance")[0].innerText = parseInt(document.getElementById("balance").innerText);
+
+    var i = document.getElementById("balance");
+    i.style.color = "green";
+    setTimeout(function () { i.style.color = "white" }, 250);
+
+    
 }
 
 function decrementBalance() {
     let oldScore = parseInt(document.getElementById("balance").innerText);
     document.getElementById("balance").innerText = --oldScore;
     document.getElementsByClassName("coinBalance")[0].innerText = parseInt(document.getElementById("balance").innerText);
+
+    var i = document.getElementById("balance");
+    i.style.color = "red";
+    setTimeout(function () { i.style.color = "white" }, 250);
 }
 
 /* Bounty increment and decrement */
@@ -319,12 +329,20 @@ function incrementBounty() {
 
     let oldHouseBountyBalance = parseInt(document.getElementById("houseBountyBalance").innerText);
     document.getElementById("houseBountyBalance").innerText = --oldHouseBountyBalance;
+
+    var i = document.getElementById("bounty");
+    i.style.color = "green";
+    setTimeout(function () { i.style.color = "white" }, 250);
 }
 
 function decrementBounty() {
     let oldScore = parseInt(document.getElementById("bounty").innerText);
     document.getElementById("bounty").innerText = oldScore - oldScore +1;
     document.getElementsByClassName("bountyBalance")[0].innerText = parseInt(document.getElementById("bounty").innerText);
+
+    var i = document.getElementById("bounty");
+    i.style.color = "red";
+    setTimeout(function () { i.style.color = "white" }, 250);
 }
 
 
@@ -348,12 +366,20 @@ function incrementV1() {
 
     document.getElementsByClassName("Vv1")[0].innerText = parseInt(document.getElementById("v1").innerText);
 
+    var i = document.getElementById("v1");
+    i.style.color = "green";
+    setTimeout(function () { i.style.color = "white" }, 250);
+
 }
 
 function decrementV1() {
     let oldV1 = parseInt(document.getElementById("v1").innerText);
     document.getElementById("v1").innerText = --oldV1;
     document.getElementsByClassName("Vv1")[0].innerText = parseInt(document.getElementById("v1").innerText);
+
+    var i = document.getElementById("v1");
+    i.style.color = "red";
+    setTimeout(function () { i.style.color = "white" }, 250);
 }
 
 // V2
@@ -361,12 +387,20 @@ function incrementV2() {
     let oldV2 = parseInt(document.getElementById("v2").innerText);
     document.getElementById("v2").innerText = ++oldV2;
     document.getElementsByClassName("Vv2")[0].innerText = parseInt(document.getElementById("v2").innerText);    
+
+    var i = document.getElementById("v2");
+    i.style.color = "green";
+    setTimeout(function () { i.style.color = "white" }, 250);
 }
 
 function decrementV2() {
     let oldV2 = parseInt(document.getElementById("v2").innerText);
     document.getElementById("v2").innerText = --oldV2;
     document.getElementsByClassName("Vv2")[0].innerText = parseInt(document.getElementById("v2").innerText);
+
+    var i = document.getElementById("v2");
+    i.style.color = "red";
+    setTimeout(function () { i.style.color = "white" }, 250);
 }
 
 // V3
@@ -374,12 +408,20 @@ function incrementV3() {
     let oldV3 = parseInt(document.getElementById("v3").innerText);
     document.getElementById("v3").innerText = ++oldV3;
     document.getElementsByClassName("Vv3")[0].innerText = parseInt(document.getElementById("v3").innerText);
+
+    var i = document.getElementById("v3");
+    i.style.color = "green";
+    setTimeout(function () { i.style.color = "white" }, 250);
 }
 
 function decrementV3() {
     let oldV3 = parseInt(document.getElementById("v3").innerText);
     document.getElementById("v3").innerText = --oldV3;
     document.getElementsByClassName("Vv3")[0].innerText = parseInt(document.getElementById("v3").innerText);
+
+    var i = document.getElementById("v3");
+    i.style.color = "red";
+    setTimeout(function () { i.style.color = "white" }, 250);
 }
 
 // V4
@@ -387,12 +429,20 @@ function incrementV4() {
     let oldV4 = parseInt(document.getElementById("v4").innerText);
     document.getElementById("v4").innerText = ++oldV4;
     document.getElementsByClassName("Vv4")[0].innerText = parseInt(document.getElementById("v4").innerText);
+
+    var i = document.getElementById("v4");
+    i.style.color = "green";
+    setTimeout(function () { i.style.color = "white" }, 250);
 }
 
 function decrementV4() {
     let oldV4 = parseInt(document.getElementById("v4").innerText);
     document.getElementById("v4").innerText = --oldV4;
     document.getElementsByClassName("Vv4")[0].innerText = parseInt(document.getElementById("v4").innerText);
+
+    var i = document.getElementById("v4");
+    i.style.color = "red";
+    setTimeout(function () { i.style.color = "white" }, 250);
 }
 
 
@@ -420,3 +470,14 @@ function miniP() {
     }
   } 
 
+
+
+
+  function showHideArmoury() {
+    var x = document.getElementById("playerBattler");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  } 
