@@ -1,4 +1,51 @@
 
+/* Hamburger Menu */
+#hamnav {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  
+  /* Menu items*/
+  #hamitems { display: flex; }
+  
+  #hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    
+  }
+  
+  #hamitems a:hover { background: red; }
+  
+  #hamnav label, #hamburger { display: none; }
+  
+  /* Hamburger Menu Responsiveness */
+  @media screen and (max-width: 3000px){
+    #hamitems a {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+    }
+   
+    #hamnav label { 
+      display: inline-block; 
+      text-align: center;
+      color: white;
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+    }
+  
+    #hamitems { display: none; }
+  
+    #hamnav input:checked ~ #hamitems { display: block; }
+  }
+  
+
 /* Header and overall */
 * {
     box-sizing: border-box;
@@ -37,6 +84,7 @@ img {
     font-weight: 700;
     text-transform: uppercase;
     color: var(--text-color);
+    width: 100%;
   }
   
   .wrapper > div {
@@ -60,7 +108,7 @@ img {
   /* Login Box */
   .login-box {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     width: 350px;
     padding: 40px;
