@@ -161,6 +161,7 @@ img {
     width: 100%;
     user-select: none;
   }
+
   
  summary {
     width: 100%;
@@ -171,6 +172,8 @@ img {
   summary::-webkit-details-marker {
     display: none;
   }
+
+  
   
 
   /* Profile Card - Mini and Large */
