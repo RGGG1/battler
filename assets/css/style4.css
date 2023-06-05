@@ -12,13 +12,14 @@
     height: 100%;
   }
   body {
-    width: 375px;
+    width: 350px;
     margin: auto;
     padding:0;
     font-family: sans-serif;
     background: black;
     color: white;
     text-align: center;
+    font-size: 14px;
   }
 
 img {
@@ -30,7 +31,7 @@ img {
     display: grid;
     place-content: center;
     background-color: var(--background-color);
-    height: 150px;
+    height: 50px;
     font-family: "Oswald", sans-serif;
     font-size: 32px;
     font-weight: 700;
@@ -234,8 +235,17 @@ summary::-webkit-details-marker {
 
 
 /* Lobby Boxes, Battle Animation Box */
-#lobbyBox1, #lobbyBox2, #lobbyBox3, #battleAnimation {
+#lobbyBox1, #lobbyBox2, #lobbyBox3, {
     height: 150px;
+    width: 90%;
+    border: solid red;
+    text-align: center;
+    margin: auto;
+}
+
+/* Battle Animation Box */
+#battleAnimation {
+    height: 350px;
     width: 90%;
     border: solid red;
     text-align: center;
