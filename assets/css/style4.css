@@ -224,3 +224,80 @@
     color: white;
     background-color: green;
 }
+
+/* Profile */
+.playerVariables {
+    float: left;
+    width: 25%;
+    padding: 5px;
+}
+
+#user {
+    border: solid gold;
+    width: 100%;
+    display: none;
+  }
+
+  #userProfileCard {
+    border: solid gold;
+    width: 100%;
+    display: inline-block;
+  }
+
+  #userProfileCardCharacter {
+    width: 100%;
+    display: inline-block;
+  }
+
+  #bals {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .gap {
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .userBalances {
+    width: 10%;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .userBounty {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+  }
+
+
+  #userProfileCardCharacter img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+
+  #userProfileCardWeapon {
+    width: 45%;
+    display: inline-block;
+
+  }
+
+  #userProfileCardSpecial {
+    width: 45%;
+    display: inline-block;
+  }
+
+  #userProfileCardWeapon img, #userProfileCardSpecial img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
+
+  .userPlayerCardVars {
+    width: 22%;
+    display: inline-block;
+  }

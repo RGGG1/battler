@@ -1,0 +1,129 @@
+ <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <!-- font awesome and google fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style4.css">
+            
+    <!-- Description, Kyewords, Title -->
+    <title>Battler</title>
+        <meta name="description" content="Fast Action Battle Game">
+        <meta name="keywords" content="Mobile game, cool new apps, fun mobile games, auto battler">
+</head>
+        
+<body>
+
+    <!-- Logo -->
+    <section class="wrapper">
+        <div class="top">Battle Godz</div>
+        <div class="bottom" aria-hidden="true">Battle Godz</div>
+    </section>
+
+    <!-- Big Profile -->
+<section id="userProfileCard">
+    <section id="bals">
+        <br>
+        <section class="userBalances">
+            <i class="fas fa-coins"> </i>
+            <br>
+            <span id="balance"> 10</span>
+        </section>
+
+        <section class="gap">ROSS</section> <!-- Make this a user input field to write their own Character name -->
+
+        <section class="userBounty">
+            <i class="fas fa-bullseye"> </i>
+            <br>
+            <span id="bounty"> 1</span></p>
+        </section>
+    </section>
+
+    <section id="userProfileCardCharacter">
+        <img src="" id="cSelect">
+    </section>    
+
+    <section id="userProfileCardWeapon">
+        <img src="" id="wSelect">
+    </section>
+
+    <section id="userProfileCardWeapon">
+        <img src="" id="sSelect">
+    </section>
+    <br>
+    <br>
+    <br>
+
+    <section id="userProfileCardVariables">
+    <!--V1-->
+    <div class="userPlayerCardVars">
+    <i class="fa fa-bolt"></i> 
+        <br>
+        <span id = "v1"> 23 </span>
+        <br>
+        <Button onclick="decrementBalance(), incrementV1();">+</Button>
+        <Button onclick="incrementBalance(), decrementV1();">-</Button>
+    </div>
+    <!--V2-->
+    <div class="userPlayerCardVars">
+        <i class="fas fa-dumbbell"></i>
+        <br>
+        <span id = "v2"> 20 </span>
+        <br>
+        <Button onclick="decrementBalance(), incrementV2();">+</Button>
+        <Button onclick="incrementBalance(), decrementV2();">-</Button>   
+    </div>
+
+    <!--V3-->
+    <div class="userPlayerCardVars">
+        <i class="fas fa-skull-crossbones"></i>
+        <br>
+        <span id = "v3"> 99 </span>
+        <br>
+        <Button onclick="decrementBalance(), incrementV3();">+</Button>
+        <Button onclick="incrementBalance(), decrementV3();">-</Button>    
+    </div>
+
+    <!--V4-->
+    <div class="userPlayerCardVars">
+        <i class="fas fa-yin-yang"></i>
+        <br>
+        <span id = "v4"> 65 </span>
+        <br>
+        <Button onclick="decrementBalance(), incrementV4();">+</Button>
+        <Button onclick="incrementBalance(), decrementV4();">-</Button>    
+    </div>
+    </section>
+    <br>
+    <br>
+    <button onclick="">Share Profile - Socials</button>
+    <br>
+    <br>
+</section>
+
+<section id="inventoryShopbuttons">
+    <br>
+    <br>
+    <button onclick="">Inventory</button>
+    <button onclick="">Shop</button>
+    <br>
+    <br>
+</section>
+
+
+
+
+
+
+<script src="assets/js/script3.js"></script>
+    <!--font awesome script-->
+    <script src="https://kit.fontawesome.com/1f271c2fd4.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
