@@ -4,7 +4,27 @@
     width: 100%;
     height: auto;
     text-align: center;
+    display: inline-block;
   }
+
+
+#nav {
+    width: 60%;
+    display: inline-block;
+    text-align: center;
+}
+
+#test {
+    width: 10%;
+    display: inline-block;
+    text-align: left;
+}
+
+#test2 {
+    width: 10%;
+    display: inline-block;
+    text-align: right;
+}
   
   /* Menu items*/
   #hamitems { display: flex; }
@@ -281,7 +301,7 @@ summary::-webkit-details-marker {
 
 
 /* Lobby Boxes, Battle Animation Box */
-#lobbyBox1, #lobbyBox2, #lobbyBox3, {
+#lobbyBox1, #lobbyBox2, #lobbyBox3 {
     height: 150px;
     width: 90%;
     border: solid red;
@@ -301,8 +321,9 @@ summary::-webkit-details-marker {
 /* Battle Button */
 #battleButton {
     width: 100px;
-    color: white;
-    background-color: green;
+    color: red;
+    background-color: black;
+    border: solid red;
 }
 
 /* Profile */
@@ -419,4 +440,9 @@ summary::-webkit-details-marker {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+}
+
+
+#test {
+
 }
